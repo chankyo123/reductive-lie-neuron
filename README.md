@@ -18,7 +18,8 @@
 
 Encoding symmetries is a powerful inductive bias for improving the generalization of deep neural networks. However, most existing equivariant models are limited to simple symmetries like rotations, failing to address the broader class of general linear transformations, GL(n), that appear in many scientific domains. We introduce **Reductive Lie Neurons (ReLNs)**, a novel neural network architecture exactly equivariant to these general linear symmetries.
 
-![Applications of ReLN across various scientific domains](figures/applications.png)
+<img src="figures/applications.png" alt="Applications of ReLN across various scientific domains" width="70%">
+
 *ReLNs are applicable to a wide range of scientific domains governed by diverse Lie group symmetries, from physics and robotics to computer vision.*
 
 Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
