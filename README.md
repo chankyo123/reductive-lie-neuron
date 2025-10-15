@@ -1,31 +1,40 @@
-# Reductive Lie Neurons (ReLN)
+# EQUIVARIANT NEURAL NETWORKS FOR GENERAL LINEAR SYMMETRIES ON LIE ALGEBRAS
 
-**Official PyTorch implementation of "Reductive Lie Neurons" (ICLR 2025, Under Review)**
+**Chankyo Kim¹*, Sicheng Zhao*, Minghan Zhu¹², Tzu-Yuan Lin³, Maani Ghaffari¹**
+<br>
+¹University of Michigan, ²University of Pennsylvania, ³Massachusetts Institute of Technology
+<br>
+*Equal contribution.
 
 [Project Website](https://your-username.github.io/reductive-lie-neuron-page) | [Paper on ArXiv](https://arxiv.org/abs/your-paper-id) | [Video](https://youtu.be/your-video-id)
-
-![Teaser Image or GIF of your best result](figures/teaser.gif)
-*A brief, exciting one-sentence description of what this image/gif shows.*
 
 ---
 
 ## About
 
-**Reductive Lie Neurons (ReLN)** is a novel equivariant neural network framework designed for Lie groups that are not necessarily semi-simple. Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras with well-defined Killing forms (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
+Encoding symmetries is a powerful inductive bias for improving the generalization of deep neural networks. However, most existing equivariant models are limited to simple symmetries like rotations, failing to address the broader class of general linear transformations, GL(n), that appear in many scientific domains. We introduce **Reductive Lie Neurons (ReLNs)**, a novel neural network architecture exactly equivariant to these general linear symmetries.
 
-This repository provides the official code to reproduce the experiments in our paper, including applications to LorentzNet and velocity learning tasks.
+![Applications of ReLN across various scientific domains](figures/fig1.pdf)
+*ReLNs are applicable to a wide range of scientific domains governed by diverse Lie group symmetries, from physics and robotics to computer vision.*
+
+Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
+
+This repository provides the official code to reproduce the experiments in our paper, including algebraic benchmarks and a challenging drone state estimation task.
 
 ---
 
-## Core Concept: Invariant Bilinear Forms for `gl(n)`
+## Core Concept: Adjoint Equivariance by Design
 
-A key contribution of our work is a systematic way to define a non-degenerate, adjoint-invariant bilinear form—a generalization of the Killing form—for any matrix Lie algebra. This form is crucial for building equivariant nonlinearities and invariants.
+A key contribution of our work is a unified framework that embeds diverse geometric inputs (like vectors and covariance matrices) into a common Lie algebra, where they transform consistently under the **adjoint action**. Our network is designed to commute with this action, guaranteeing equivariance.
 
-For example, for the general linear group `gl(n)`, which is reductive but not semi-simple, the standard Killing form is degenerate. We define a non-degenerate form as:
+![Equivariance Diagram](figures/fig3.pdf)
+*Our network `f` is provably equivariant. A transformation `Ad_g` on the input results in the same transformation `Ad_g` on the output feature.*
+
+To achieve this for general reductive algebras like `gl(n)`, we introduce a non-degenerate, Ad-invariant bilinear form:
 
 `B(X, Y) = 2n * tr(XY) - tr(X)tr(Y)`
 
-This allows us to build powerful equivariant modules for a wider range of groups. Here’s a simple code snippet demonstrating how this is used to create an invariant feature:
+This form is the fundamental tool used to build our equivariant layers. Here’s a simple code snippet demonstrating how it creates an invariant feature:
 
 ```python
 # From core/layers.py
@@ -34,27 +43,26 @@ import torch
 class LNInvariant(nn.Module):
     """
     Computes an invariant scalar feature from a Lie algebra element
-    using the 'self-killing' method with our non-degenerate form.
+    using our non-degenerate bilinear form.
     """
     def __init__(self, in_channels, algebra_type='gl3'):
         super(LNInvariant, self).__init__()
-        self.hat_layer = HatLayer(algebra_type)
+        self.hat_layer = HatLayer(algebra_type) # Maps vector to matrix
         self.algebra_type = algebra_type
 
     def forward(self, x):
         """
-        Input x: Lie algebra vectors of shape [B, F, N, 1]
-        Output: Invariant scalars of shape [B, F]
+        Input x: Lie algebra vectors
+        Output: Invariant scalars
         """
         # 1. Map vector representation to matrix representation
-        x_hat = self.hat_layer(x) # [B, F, N, n, n]
+        x_hat = self.hat_layer(x)
 
         # 2. Compute the invariant using the bilinear form B(X, X)
-        # killingform() function handles different algebra types
-        invariant_scalar = killingform(x_hat, x_hat, self.algebra_type) # [B, F, N, 1]
+        invariant_scalar = killingform(x_hat, x_hat, self.algebra_type)
 
-        # 3. Aggregate over the spatial/node dimension (e.g., via mean or max)
-        return invariant_scalar.mean(dim=[2, 3])
+        # 3. Aggregate features (e.g., via mean)
+        return invariant_scalar.mean(dim=[-2, -1])
 ```
 
 For a more detailed interactive example, please see our [Toy Problem Notebook](examples/toy_problem.ipynb).
@@ -80,16 +88,16 @@ pip install -r requirements.txt
 
 All experiment scripts are located in the `experiments/` directory.
 
-### LorentzNet Experiment
-To reproduce the LorentzNet experiment from our paper, run the following command:
+### Algebraic Benchmark: Platonic Solid Classification
+This experiment validates `SL(3)` equivariance.
 ```bash
-python experiments/lorentznet/train.py --config configs/lorentz_config.yaml
+python experiments/platonic_solid/train.py --config configs/sl3_config.yaml
 ```
 
-### Velocity Learning Experiment
-To run the velocity learning task:
+### Drone State Estimation
+This experiment demonstrates uncertainty-aware `SO(3)` equivariance on velocity and covariance data.
 ```bash
-python experiments/velocity_learning/train.py --config configs/velocity_config.yaml
+python experiments/drone_estimation/train.py --config configs/drone_config.yaml
 ```
 
 *Tip: We found that a lower learning rate (e.g., `1e-4` to `3e-5`) and careful weight initialization are crucial for stable training, especially for deeper networks.*
@@ -101,9 +109,9 @@ python experiments/velocity_learning/train.py --config configs/velocity_config.y
 If you find our work useful, please consider citing our paper:
 
 ```bibtex
-@inproceedings{yourname2025reln,
-  title={{Reductive Lie Neurons}: A Framework for General Matrix Lie Groups},
-  author={Kim, Chankyo and Zhao, Sicheng and ...},
+@inproceedings{kim2025reln,
+  title={{EQUIVARIANT NEURAL NETWORKS FOR GENERAL LINEAR SYMMETRIES ON LIE ALGEBRAS}},
+  author={Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2025}
 }
