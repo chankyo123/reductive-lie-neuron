@@ -31,7 +31,8 @@ This repository provides the official code to reproduce the experiments in our p
 
 A key contribution of our work is a unified framework that embeds diverse geometric inputs (like vectors and covariance matrices) into a common Lie algebra, where they transform consistently under the **adjoint action**. Our network is designed to commute with this action, guaranteeing equivariance.
 
-![Equivariance Diagram](figures/equivariance_diagram.png)
+<img src="figures/equivariance_diagram.png" alt="Equivariance Diagram" width="60%">
+
 *Our network `f` is provably equivariant. A transformation `Ad_g` on the input results in the same transformation `Ad_g` on the output feature.*
 
 To achieve this for general reductive algebras like `gl(n)`, we introduce a non-degenerate, Ad-invariant bilinear form:
