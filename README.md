@@ -1,4 +1,6 @@
-# EQUIVARIANT NEURAL NETWORKS FOR GENERAL LINEAR SYMMETRIES ON LIE ALGEBRAS
+# Equivariant neural networks for general linear symmetries on Lie algebras
+
+**Official PyTorch implementation of "Reductive Lie Neurons" (ICLR 2025, Under Review)**
 
 **Chankyo Kim¹*, Sicheng Zhao*, Minghan Zhu¹², Tzu-Yuan Lin³, Maani Ghaffari¹**
 <br>
@@ -14,7 +16,7 @@
 
 Encoding symmetries is a powerful inductive bias for improving the generalization of deep neural networks. However, most existing equivariant models are limited to simple symmetries like rotations, failing to address the broader class of general linear transformations, GL(n), that appear in many scientific domains. We introduce **Reductive Lie Neurons (ReLNs)**, a novel neural network architecture exactly equivariant to these general linear symmetries.
 
-![Applications of ReLN across various scientific domains](figures/fig1.pdf)
+![Applications of ReLN across various scientific domains](figures/applications.png)
 *ReLNs are applicable to a wide range of scientific domains governed by diverse Lie group symmetries, from physics and robotics to computer vision.*
 
 Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
@@ -27,7 +29,7 @@ This repository provides the official code to reproduce the experiments in our p
 
 A key contribution of our work is a unified framework that embeds diverse geometric inputs (like vectors and covariance matrices) into a common Lie algebra, where they transform consistently under the **adjoint action**. Our network is designed to commute with this action, guaranteeing equivariance.
 
-![Equivariance Diagram](figures/fig3.pdf)
+![Equivariance Diagram](figures/equivariance_diagram.png)
 *Our network `f` is provably equivariant. A transformation `Ad_g` on the input results in the same transformation `Ad_g` on the output feature.*
 
 To achieve this for general reductive algebras like `gl(n)`, we introduce a non-degenerate, Ad-invariant bilinear form:
@@ -110,7 +112,7 @@ If you find our work useful, please consider citing our paper:
 
 ```bibtex
 @inproceedings{kim2025reln,
-  title={{EQUIVARIANT NEURAL NETWORKS FOR GENERAL LINEAR SYMMETRIES ON LIE ALGEBRAS}},
+  title={{Equivariant neural networks for general linear symmetries on Lie algebras}},
   author={Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2025}
