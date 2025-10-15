@@ -1,6 +1,8 @@
 # Equivariant neural networks for general linear symmetries on Lie algebras
 
-**Official PyTorch implementation of "Reductive Lie Neurons" (ICLR 2025, Under Review)**
+**Official PyTorch implementation of "Reductive Lie Neurons"**
+<br>
+*(Currently Under Review for ICLR 2025)*
 
 **Chankyo Kim¹*, Sicheng Zhao*, Minghan Zhu¹², Tzu-Yuan Lin³, Maani Ghaffari¹**
 <br>
@@ -8,7 +10,7 @@
 <br>
 *Equal contribution.
 
-[Project Website](https://your-username.github.io/reductive-lie-neuron-page) | [Paper on ArXiv](https://arxiv.org/abs/your-paper-id) | [Video](https://youtu.be/your-video-id)
+[Project Website (Coming Soon)](#) | [Paper on ArXiv (Coming Soon)](#)
 
 ---
 
@@ -21,7 +23,7 @@ Encoding symmetries is a powerful inductive bias for improving the generalizatio
 
 Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
 
-This repository provides the official code to reproduce the experiments in our paper, including algebraic benchmarks and a challenging drone state estimation task.
+This repository provides the official code to reproduce the experiments in our paper.
 
 ---
 
@@ -77,44 +79,82 @@ To set up the environment, please follow these steps:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/reductive-lie-neuron.git](https://github.com/your-username/reductive-lie-neuron.git)
+git clone [https://github.com/chankyo123/reductive-lie-neuron.git](https://github.com/chankyo123/reductive-lie-neuron.git)
 cd reductive-lie-neuron
-
-# Install dependencies
-pip install -r requirements.txt
 ```
+Each experiment has its own set of dependencies. Please refer to the `README` file within each experiment's directory (e.g., `experiments/lorentznet/`) for specific installation instructions.
 
 ---
 
 ## Reproducing Paper Results
 
-All experiment scripts are located in the `experiments/` directory.
+All experiment scripts are located in the `experiments/` directory. For each experiment, first download the required dataset and place it in the corresponding `data/` subfolder.
 
-### Algebraic Benchmark: Platonic Solid Classification
-This experiment validates `SL(3)` equivariance.
+### Algebraic Benchmarks (`sl(3)` and `sp(4)`)
+These experiments reproduce the Platonic Solid Classification and `sp(4)` Invariant Function Regression results. Our model directly adopts the architecture from Lie Neurons, replacing only the bilinear form.
+
+For detailed instructions on data generation, training, and evaluation for these benchmarks, please refer to the original **[LieNeurons GitHub repository](https://github.com/UMich-CURLY/LieNeurons)**.
+
+### Particle Physics: Top-Tagging (`SO(1,3)`)
+This experiment reproduces the Top-Tagging benchmark results. The following command trains our ReLN-based model.
+
 ```bash
-python experiments/platonic_solid/train.py --config configs/sl3_config.yaml
+# Navigate to the experiment directory
+cd experiments/lorentznet/
+
+# Run training
+torchrun --nproc_per_node=1 top_tagging.py \
+    --batch_size=32 \
+    --epochs=35 \
+    --warmup_epochs=4 \
+    --n_layers=5 \
+    --n_hidden=48 \
+    --lr=0.001 \
+    --weight_decay=0.01 \
+    --exp_name=reln_top_tagging_repro \
+    --datadir ./data/toptag/
 ```
 
-### Drone State Estimation
-This experiment demonstrates uncertainty-aware `SO(3)` equivariance on velocity and covariance data.
+### Drone State Estimation (`SO(3)` with Uncertainty)
+This experiment reproduces the drone trajectory estimation results. The main script allows you to train different model architectures by changing the `--arch` flag.
+
+**To train our best-performing model (ReLN with log-covariance):**
 ```bash
-python experiments/drone_estimation/train.py --config configs/drone_config.yaml
+# Navigate to the experiment directory
+cd experiments/velocity_learning/
+
+# Run training for the main ReLN model
+python3 src/main_net.py \
+    --mode train \
+    --root_dir ./data/drone_trajectories/ \
+    --out_dir ./results/reln_log_cov/ \
+    --epochs 200 \
+    --arch ln_resnet_cov \
+    --input_dim 6 
 ```
 
-*Tip: We found that a lower learning rate (e.g., `1e-4` to `3e-5`) and careful weight initialization are crucial for stable training, especially for deeper networks.*
+**To train other baseline models for comparison:**
+
+You can reproduce the ablation studies in our paper by changing the `--arch` flag. Key architectures include:
+
+* `--arch resnet`: Non-equivariant ResNet baseline.
+* `--arch vn_resnet`: Equivariant Vector Neurons (VN) baseline (velocity only).
+* `--arch vn_resnet_cov`: VN baseline adapted for covariance.
+* `--arch ln_resnet`: Our ReLN model using only velocity information.
 
 ---
 
 ## Citation
 
-If you find our work useful, please consider citing our paper:
+Our paper is currently under review. If you find our work useful, please cite the ArXiv preprint (link will be available here soon).
 
 ```bibtex
-@inproceedings{kim2025reln,
-  title={{Equivariant neural networks for general linear symmetries on Lie algebras}},
-  author={Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
-  booktitle={International Conference on Learning Representations (ICLR)},
-  year={2025}
+@misc{kim2024reductive,
+      title={Equivariant neural networks for general linear symmetries on Lie algebras}, 
+      author={Chankyo Kim and Sicheng Zhao and Minghan Zhu and Tzu-Yuan Lin and Maani Ghaffari},
+      year={2024},
+      eprint={24XX.XXXXX},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
