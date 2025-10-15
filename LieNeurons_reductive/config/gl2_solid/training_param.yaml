@@ -1,0 +1,16 @@
+model_description: "Elasticity tensor prediction"
+print_freq: 1
+model_type: "LN_relu_bracket"
+model_save_path: "weights/gl2_solid/0328_lr_1e4"
+log_writer_path: "logs/gl2_solid/0328_lr_1e4"
+resume_training: False
+resume_model_path: "models/elasticity_model_last_epoch.pt"
+num_workers: 1
+batch_size: 32
+update_every_batch: 1
+initial_learning_rate: 0.0001
+learning_rate_decay_rate: 0.0
+num_epochs: 100
+data_dir: "solid/elasticity_tensors"
+shuffle: True
+weight_decay_rate: 0.0001

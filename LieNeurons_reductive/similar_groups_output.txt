@@ -1,0 +1,3150 @@
+--- Similar Averaged C Matrix Groups (All values within ±1.00%) ---
+
+
+Group 1 (Total 21 files):
+  - expe_bitension_4.csv
+  - expe_shear_4.csv
+  - expe_shear_tension_4.csv
+  - expe_simple_shear_4.csv
+  - expe_tension_4.csv
+  - expe_tension_shear_4.csv
+  - expe_tension_tension_4.csv
+  - kubc_bitension_4.csv
+  - kubc_shear_4.csv
+  - kubc_shear_tension_4.csv
+  - kubc_tension_4.csv
+  - kubc_tension_shear_4.csv
+  - kubc_tension_tension_4.csv
+  - kubc_willam_4.csv
+  - pbc_bitension_4.csv
+  - pbc_shear_4.csv
+  - pbc_shear_tension_4.csv
+  - pbc_tension_4.csv
+  - pbc_tension_shear_4.csv
+  - pbc_tension_tension_4.csv
+  - pbc_willam_4.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_shear_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_simple_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_tension_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+expe_tension_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_bitension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_shear_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_tension_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_tension_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+kubc_willam_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_bitension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_shear_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_tension_shear_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_tension_tension_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+pbc_willam_4.csv:
+[[ 4.96624221e+10 -1.07789646e+07]]
+
+Group 2 (Total 63 files):
+  - expe_bitension_1.csv
+  - expe_bitension_10.csv
+  - expe_bitension_29.csv
+  - expe_shear_1.csv
+  - expe_shear_10.csv
+  - expe_shear_29.csv
+  - expe_shear_tension_1.csv
+  - expe_shear_tension_10.csv
+  - expe_shear_tension_29.csv
+  - expe_simple_shear_1.csv
+  - expe_simple_shear_10.csv
+  - expe_simple_shear_29.csv
+  - expe_tension_1.csv
+  - expe_tension_10.csv
+  - expe_tension_29.csv
+  - expe_tension_shear_1.csv
+  - expe_tension_shear_10.csv
+  - expe_tension_shear_29.csv
+  - expe_tension_tension_1.csv
+  - expe_tension_tension_10.csv
+  - expe_tension_tension_29.csv
+  - kubc_bitension_1.csv
+  - kubc_bitension_10.csv
+  - kubc_bitension_29.csv
+  - kubc_shear_1.csv
+  - kubc_shear_10.csv
+  - kubc_shear_29.csv
+  - kubc_shear_tension_1.csv
+  - kubc_shear_tension_10.csv
+  - kubc_shear_tension_29.csv
+  - kubc_tension_1.csv
+  - kubc_tension_10.csv
+  - kubc_tension_29.csv
+  - kubc_tension_shear_1.csv
+  - kubc_tension_shear_10.csv
+  - kubc_tension_shear_29.csv
+  - kubc_tension_tension_1.csv
+  - kubc_tension_tension_10.csv
+  - kubc_tension_tension_29.csv
+  - kubc_willam_1.csv
+  - kubc_willam_10.csv
+  - kubc_willam_29.csv
+  - pbc_bitension_1.csv
+  - pbc_bitension_10.csv
+  - pbc_bitension_29.csv
+  - pbc_shear_1.csv
+  - pbc_shear_10.csv
+  - pbc_shear_29.csv
+  - pbc_shear_tension_1.csv
+  - pbc_shear_tension_10.csv
+  - pbc_shear_tension_29.csv
+  - pbc_tension_1.csv
+  - pbc_tension_10.csv
+  - pbc_tension_29.csv
+  - pbc_tension_shear_1.csv
+  - pbc_tension_shear_10.csv
+  - pbc_tension_shear_29.csv
+  - pbc_tension_tension_1.csv
+  - pbc_tension_tension_10.csv
+  - pbc_tension_tension_29.csv
+  - pbc_willam_1.csv
+  - pbc_willam_10.csv
+  - pbc_willam_29.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_bitension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_bitension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_shear_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_shear_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_shear_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_simple_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_simple_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_simple_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_tension_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_tension_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_tension_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+expe_tension_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+expe_tension_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+expe_tension_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_bitension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_bitension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_bitension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_shear_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_shear_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_shear_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_tension_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_tension_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_tension_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_tension_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_tension_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_tension_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+kubc_willam_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+kubc_willam_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+kubc_willam_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_bitension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_bitension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_bitension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_shear_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_shear_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_shear_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_tension_shear_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_tension_shear_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_tension_shear_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_tension_tension_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_tension_tension_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_tension_tension_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+pbc_willam_1.csv:
+[[ 4.97651555e+10 -1.71399375e+07]]
+
+pbc_willam_10.csv:
+[[ 4.97038246e+10 -1.71447450e+07]]
+
+pbc_willam_29.csv:
+[[ 4.97065581e+10 -1.71556412e+07]]
+
+Group 3 (Total 19 files):
+  - expe_bitension_17.csv
+  - expe_shear_17.csv
+  - expe_shear_tension_17.csv
+  - expe_simple_shear_17.csv
+  - expe_tension_17.csv
+  - expe_tension_shear_17.csv
+  - expe_tension_tension_17.csv
+  - kubc_bitension_17.csv
+  - kubc_shear_17.csv
+  - kubc_shear_tension_17.csv
+  - kubc_tension_17.csv
+  - kubc_tension_shear_17.csv
+  - kubc_tension_tension_17.csv
+  - kubc_willam_17.csv
+  - pbc_bitension_17.csv
+  - pbc_tension_17.csv
+  - pbc_tension_shear_17.csv
+  - pbc_tension_tension_17.csv
+  - pbc_willam_17.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_shear_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_simple_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_tension_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+expe_tension_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_bitension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_shear_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_tension_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_tension_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+kubc_willam_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+pbc_bitension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+pbc_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+pbc_tension_shear_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+pbc_tension_tension_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+pbc_willam_17.csv:
+[[4.98193938e+10 3.04541306e+07]]
+
+Group 4 (Total 21 files):
+  - expe_bitension_31.csv
+  - expe_shear_31.csv
+  - expe_shear_tension_31.csv
+  - expe_simple_shear_31.csv
+  - expe_tension_31.csv
+  - expe_tension_shear_31.csv
+  - expe_tension_tension_31.csv
+  - kubc_bitension_31.csv
+  - kubc_shear_31.csv
+  - kubc_shear_tension_31.csv
+  - kubc_tension_31.csv
+  - kubc_tension_shear_31.csv
+  - kubc_tension_tension_31.csv
+  - kubc_willam_31.csv
+  - pbc_bitension_31.csv
+  - pbc_shear_31.csv
+  - pbc_shear_tension_31.csv
+  - pbc_tension_31.csv
+  - pbc_tension_shear_31.csv
+  - pbc_tension_tension_31.csv
+  - pbc_willam_31.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_shear_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_simple_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_tension_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+expe_tension_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_bitension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_shear_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_tension_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_tension_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+kubc_willam_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_bitension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_shear_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_tension_shear_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_tension_tension_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+pbc_willam_31.csv:
+[[4.97313102e+10 3.48683856e+07]]
+
+Group 5 (Total 21 files):
+  - expe_bitension_23.csv
+  - expe_shear_23.csv
+  - expe_shear_tension_23.csv
+  - expe_simple_shear_23.csv
+  - expe_tension_23.csv
+  - expe_tension_shear_23.csv
+  - expe_tension_tension_23.csv
+  - kubc_bitension_23.csv
+  - kubc_shear_23.csv
+  - kubc_shear_tension_23.csv
+  - kubc_tension_23.csv
+  - kubc_tension_shear_23.csv
+  - kubc_tension_tension_23.csv
+  - kubc_willam_23.csv
+  - pbc_bitension_23.csv
+  - pbc_shear_23.csv
+  - pbc_shear_tension_23.csv
+  - pbc_tension_23.csv
+  - pbc_tension_shear_23.csv
+  - pbc_tension_tension_23.csv
+  - pbc_willam_23.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_shear_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_simple_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_tension_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+expe_tension_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_bitension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_shear_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_tension_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_tension_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+kubc_willam_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_bitension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_shear_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_tension_shear_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_tension_tension_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+pbc_willam_23.csv:
+[[4.96878577e+10 4.92680187e+07]]
+
+Group 6 (Total 21 files):
+  - expe_bitension_25.csv
+  - expe_shear_25.csv
+  - expe_shear_tension_25.csv
+  - expe_simple_shear_25.csv
+  - expe_tension_25.csv
+  - expe_tension_shear_25.csv
+  - expe_tension_tension_25.csv
+  - kubc_bitension_25.csv
+  - kubc_shear_25.csv
+  - kubc_shear_tension_25.csv
+  - kubc_tension_25.csv
+  - kubc_tension_shear_25.csv
+  - kubc_tension_tension_25.csv
+  - kubc_willam_25.csv
+  - pbc_bitension_25.csv
+  - pbc_shear_25.csv
+  - pbc_shear_tension_25.csv
+  - pbc_tension_25.csv
+  - pbc_tension_shear_25.csv
+  - pbc_tension_tension_25.csv
+  - pbc_willam_25.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_shear_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_simple_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_tension_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+expe_tension_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_bitension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_shear_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_tension_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_tension_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+kubc_willam_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_bitension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_shear_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_tension_shear_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_tension_tension_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+pbc_willam_25.csv:
+[[4.96739706e+10 1.53342196e+07]]
+
+Group 7 (Total 21 files):
+  - expe_bitension_19.csv
+  - expe_shear_19.csv
+  - expe_shear_tension_19.csv
+  - expe_simple_shear_19.csv
+  - expe_tension_19.csv
+  - expe_tension_shear_19.csv
+  - expe_tension_tension_19.csv
+  - kubc_bitension_19.csv
+  - kubc_shear_19.csv
+  - kubc_shear_tension_19.csv
+  - kubc_tension_19.csv
+  - kubc_tension_shear_19.csv
+  - kubc_tension_tension_19.csv
+  - kubc_willam_19.csv
+  - pbc_bitension_19.csv
+  - pbc_shear_19.csv
+  - pbc_shear_tension_19.csv
+  - pbc_tension_19.csv
+  - pbc_tension_shear_19.csv
+  - pbc_tension_tension_19.csv
+  - pbc_willam_19.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_shear_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_simple_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_tension_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+expe_tension_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_bitension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_shear_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_tension_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_tension_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+kubc_willam_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_bitension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_shear_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_tension_shear_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_tension_tension_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+pbc_willam_19.csv:
+[[ 4.97901594e+10 -2.82545795e+07]]
+
+Group 8 (Total 21 files):
+  - expe_bitension_16.csv
+  - expe_shear_16.csv
+  - expe_shear_tension_16.csv
+  - expe_simple_shear_16.csv
+  - expe_tension_16.csv
+  - expe_tension_shear_16.csv
+  - expe_tension_tension_16.csv
+  - kubc_bitension_16.csv
+  - kubc_shear_16.csv
+  - kubc_shear_tension_16.csv
+  - kubc_tension_16.csv
+  - kubc_tension_shear_16.csv
+  - kubc_tension_tension_16.csv
+  - kubc_willam_16.csv
+  - pbc_bitension_16.csv
+  - pbc_shear_16.csv
+  - pbc_shear_tension_16.csv
+  - pbc_tension_16.csv
+  - pbc_tension_shear_16.csv
+  - pbc_tension_tension_16.csv
+  - pbc_willam_16.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_shear_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_simple_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_tension_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+expe_tension_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_bitension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_shear_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_tension_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_tension_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+kubc_willam_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_bitension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_shear_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_tension_shear_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_tension_tension_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+pbc_willam_16.csv:
+[[4.97227394e+10 1.74674698e+07]]
+
+Group 9 (Total 21 files):
+  - expe_bitension_18.csv
+  - expe_shear_18.csv
+  - expe_shear_tension_18.csv
+  - expe_simple_shear_18.csv
+  - expe_tension_18.csv
+  - expe_tension_shear_18.csv
+  - expe_tension_tension_18.csv
+  - kubc_bitension_18.csv
+  - kubc_shear_18.csv
+  - kubc_shear_tension_18.csv
+  - kubc_tension_18.csv
+  - kubc_tension_shear_18.csv
+  - kubc_tension_tension_18.csv
+  - kubc_willam_18.csv
+  - pbc_bitension_18.csv
+  - pbc_shear_18.csv
+  - pbc_shear_tension_18.csv
+  - pbc_tension_18.csv
+  - pbc_tension_shear_18.csv
+  - pbc_tension_tension_18.csv
+  - pbc_willam_18.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_shear_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_simple_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_tension_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+expe_tension_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_bitension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_shear_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_tension_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_tension_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+kubc_willam_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_bitension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_shear_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_tension_shear_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_tension_tension_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+pbc_willam_18.csv:
+[[ 4.96620118e+10 -1.27456829e+07]]
+
+Group 10 (Total 21 files):
+  - expe_bitension_14.csv
+  - expe_shear_14.csv
+  - expe_shear_tension_14.csv
+  - expe_simple_shear_14.csv
+  - expe_tension_14.csv
+  - expe_tension_shear_14.csv
+  - expe_tension_tension_14.csv
+  - kubc_bitension_14.csv
+  - kubc_shear_14.csv
+  - kubc_shear_tension_14.csv
+  - kubc_tension_14.csv
+  - kubc_tension_shear_14.csv
+  - kubc_tension_tension_14.csv
+  - kubc_willam_14.csv
+  - pbc_bitension_14.csv
+  - pbc_shear_14.csv
+  - pbc_shear_tension_14.csv
+  - pbc_tension_14.csv
+  - pbc_tension_shear_14.csv
+  - pbc_tension_tension_14.csv
+  - pbc_willam_14.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_shear_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_simple_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_tension_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+expe_tension_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_bitension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_shear_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_tension_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_tension_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+kubc_willam_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_bitension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_shear_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_tension_shear_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_tension_tension_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+pbc_willam_14.csv:
+[[ 4.96798680e+10 -4.34861721e+07]]
+
+Group 11 (Total 21 files):
+  - expe_bitension_24.csv
+  - expe_shear_24.csv
+  - expe_shear_tension_24.csv
+  - expe_simple_shear_24.csv
+  - expe_tension_24.csv
+  - expe_tension_shear_24.csv
+  - expe_tension_tension_24.csv
+  - kubc_bitension_24.csv
+  - kubc_shear_24.csv
+  - kubc_shear_tension_24.csv
+  - kubc_tension_24.csv
+  - kubc_tension_shear_24.csv
+  - kubc_tension_tension_24.csv
+  - kubc_willam_24.csv
+  - pbc_bitension_24.csv
+  - pbc_shear_24.csv
+  - pbc_shear_tension_24.csv
+  - pbc_tension_24.csv
+  - pbc_tension_shear_24.csv
+  - pbc_tension_tension_24.csv
+  - pbc_willam_24.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_shear_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_simple_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_tension_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+expe_tension_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_bitension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_shear_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_tension_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_tension_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+kubc_willam_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_bitension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_shear_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_tension_shear_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_tension_tension_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+pbc_willam_24.csv:
+[[4.97770141e+10 5.81110763e+07]]
+
+Group 12 (Total 21 files):
+  - expe_bitension_28.csv
+  - expe_shear_28.csv
+  - expe_shear_tension_28.csv
+  - expe_simple_shear_28.csv
+  - expe_tension_28.csv
+  - expe_tension_shear_28.csv
+  - expe_tension_tension_28.csv
+  - kubc_bitension_28.csv
+  - kubc_shear_28.csv
+  - kubc_shear_tension_28.csv
+  - kubc_tension_28.csv
+  - kubc_tension_shear_28.csv
+  - kubc_tension_tension_28.csv
+  - kubc_willam_28.csv
+  - pbc_bitension_28.csv
+  - pbc_shear_28.csv
+  - pbc_shear_tension_28.csv
+  - pbc_tension_28.csv
+  - pbc_tension_shear_28.csv
+  - pbc_tension_tension_28.csv
+  - pbc_willam_28.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_shear_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_simple_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_tension_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+expe_tension_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_bitension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_shear_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_tension_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_tension_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+kubc_willam_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_bitension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_shear_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_tension_shear_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_tension_tension_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+pbc_willam_28.csv:
+[[ 4.98378999e+10 -1.92466010e+07]]
+
+Group 13 (Total 21 files):
+  - expe_bitension_7.csv
+  - expe_shear_7.csv
+  - expe_shear_tension_7.csv
+  - expe_simple_shear_7.csv
+  - expe_tension_7.csv
+  - expe_tension_shear_7.csv
+  - expe_tension_tension_7.csv
+  - kubc_bitension_7.csv
+  - kubc_shear_7.csv
+  - kubc_shear_tension_7.csv
+  - kubc_tension_7.csv
+  - kubc_tension_shear_7.csv
+  - kubc_tension_tension_7.csv
+  - kubc_willam_7.csv
+  - pbc_bitension_7.csv
+  - pbc_shear_7.csv
+  - pbc_shear_tension_7.csv
+  - pbc_tension_7.csv
+  - pbc_tension_shear_7.csv
+  - pbc_tension_tension_7.csv
+  - pbc_willam_7.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_shear_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_simple_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_tension_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+expe_tension_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_bitension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_shear_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_tension_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_tension_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+kubc_willam_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_bitension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_shear_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_tension_shear_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_tension_tension_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+pbc_willam_7.csv:
+[[ 4.97347895e+10 -3.26160787e+07]]
+
+Group 14 (Total 42 files):
+  - expe_bitension_11.csv
+  - expe_bitension_30.csv
+  - expe_shear_11.csv
+  - expe_shear_30.csv
+  - expe_shear_tension_11.csv
+  - expe_shear_tension_30.csv
+  - expe_simple_shear_11.csv
+  - expe_simple_shear_30.csv
+  - expe_tension_11.csv
+  - expe_tension_30.csv
+  - expe_tension_shear_11.csv
+  - expe_tension_shear_30.csv
+  - expe_tension_tension_11.csv
+  - expe_tension_tension_30.csv
+  - kubc_bitension_11.csv
+  - kubc_bitension_30.csv
+  - kubc_shear_11.csv
+  - kubc_shear_30.csv
+  - kubc_shear_tension_11.csv
+  - kubc_shear_tension_30.csv
+  - kubc_tension_11.csv
+  - kubc_tension_30.csv
+  - kubc_tension_shear_11.csv
+  - kubc_tension_shear_30.csv
+  - kubc_tension_tension_11.csv
+  - kubc_tension_tension_30.csv
+  - kubc_willam_11.csv
+  - kubc_willam_30.csv
+  - pbc_bitension_11.csv
+  - pbc_bitension_30.csv
+  - pbc_shear_11.csv
+  - pbc_shear_30.csv
+  - pbc_shear_tension_11.csv
+  - pbc_shear_tension_30.csv
+  - pbc_tension_11.csv
+  - pbc_tension_30.csv
+  - pbc_tension_shear_11.csv
+  - pbc_tension_shear_30.csv
+  - pbc_tension_tension_11.csv
+  - pbc_tension_tension_30.csv
+  - pbc_willam_11.csv
+  - pbc_willam_30.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_bitension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_shear_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_shear_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_simple_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_simple_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_tension_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_tension_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+expe_tension_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+expe_tension_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_bitension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_bitension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_shear_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_shear_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_tension_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_tension_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_tension_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_tension_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+kubc_willam_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+kubc_willam_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_bitension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_bitension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_shear_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_shear_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_tension_shear_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_tension_shear_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_tension_tension_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_tension_tension_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+pbc_willam_11.csv:
+[[ 4.98691862e+10 -3.37280687e+07]]
+
+pbc_willam_30.csv:
+[[ 4.97172675e+10 -3.34970673e+07]]
+
+Group 15 (Total 21 files):
+  - expe_bitension_6.csv
+  - expe_shear_6.csv
+  - expe_shear_tension_6.csv
+  - expe_simple_shear_6.csv
+  - expe_tension_6.csv
+  - expe_tension_shear_6.csv
+  - expe_tension_tension_6.csv
+  - kubc_bitension_6.csv
+  - kubc_shear_6.csv
+  - kubc_shear_tension_6.csv
+  - kubc_tension_6.csv
+  - kubc_tension_shear_6.csv
+  - kubc_tension_tension_6.csv
+  - kubc_willam_6.csv
+  - pbc_bitension_6.csv
+  - pbc_shear_6.csv
+  - pbc_shear_tension_6.csv
+  - pbc_tension_6.csv
+  - pbc_tension_shear_6.csv
+  - pbc_tension_tension_6.csv
+  - pbc_willam_6.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_shear_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_simple_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_tension_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+expe_tension_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_bitension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_shear_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_tension_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_tension_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+kubc_willam_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_bitension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_shear_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_tension_shear_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_tension_tension_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+pbc_willam_6.csv:
+[[4.97721581e+10 3.43121462e+07]]
+
+Group 16 (Total 21 files):
+  - expe_bitension_15.csv
+  - expe_shear_15.csv
+  - expe_shear_tension_15.csv
+  - expe_simple_shear_15.csv
+  - expe_tension_15.csv
+  - expe_tension_shear_15.csv
+  - expe_tension_tension_15.csv
+  - kubc_bitension_15.csv
+  - kubc_shear_15.csv
+  - kubc_shear_tension_15.csv
+  - kubc_tension_15.csv
+  - kubc_tension_shear_15.csv
+  - kubc_tension_tension_15.csv
+  - kubc_willam_15.csv
+  - pbc_bitension_15.csv
+  - pbc_shear_15.csv
+  - pbc_shear_tension_15.csv
+  - pbc_tension_15.csv
+  - pbc_tension_shear_15.csv
+  - pbc_tension_tension_15.csv
+  - pbc_willam_15.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_shear_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_simple_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_tension_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+expe_tension_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_bitension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_shear_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_tension_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_tension_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+kubc_willam_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_bitension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_shear_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_tension_shear_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_tension_tension_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+pbc_willam_15.csv:
+[[ 4.97561348e+10 -4.28615091e+07]]
+
+Group 17 (Total 21 files):
+  - expe_bitension_12.csv
+  - expe_shear_12.csv
+  - expe_shear_tension_12.csv
+  - expe_simple_shear_12.csv
+  - expe_tension_12.csv
+  - expe_tension_shear_12.csv
+  - expe_tension_tension_12.csv
+  - kubc_bitension_12.csv
+  - kubc_shear_12.csv
+  - kubc_shear_tension_12.csv
+  - kubc_tension_12.csv
+  - kubc_tension_shear_12.csv
+  - kubc_tension_tension_12.csv
+  - kubc_willam_12.csv
+  - pbc_bitension_12.csv
+  - pbc_shear_12.csv
+  - pbc_shear_tension_12.csv
+  - pbc_tension_12.csv
+  - pbc_tension_shear_12.csv
+  - pbc_tension_tension_12.csv
+  - pbc_willam_12.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_shear_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_simple_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_tension_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+expe_tension_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_bitension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_shear_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_tension_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_tension_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+kubc_willam_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_bitension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_shear_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_tension_shear_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_tension_tension_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+pbc_willam_12.csv:
+[[4.97435725e+10 1.70572240e+06]]
+
+Group 18 (Total 21 files):
+  - expe_bitension_13.csv
+  - expe_shear_13.csv
+  - expe_shear_tension_13.csv
+  - expe_simple_shear_13.csv
+  - expe_tension_13.csv
+  - expe_tension_shear_13.csv
+  - expe_tension_tension_13.csv
+  - kubc_bitension_13.csv
+  - kubc_shear_13.csv
+  - kubc_shear_tension_13.csv
+  - kubc_tension_13.csv
+  - kubc_tension_shear_13.csv
+  - kubc_tension_tension_13.csv
+  - kubc_willam_13.csv
+  - pbc_bitension_13.csv
+  - pbc_shear_13.csv
+  - pbc_shear_tension_13.csv
+  - pbc_tension_13.csv
+  - pbc_tension_shear_13.csv
+  - pbc_tension_tension_13.csv
+  - pbc_willam_13.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_shear_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_simple_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_tension_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+expe_tension_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_bitension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_shear_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_tension_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_tension_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+kubc_willam_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_bitension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_shear_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_tension_shear_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_tension_tension_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+pbc_willam_13.csv:
+[[4.97587766e+10 8.73412078e+06]]
+
+Group 19 (Total 21 files):
+  - expe_bitension_22.csv
+  - expe_shear_22.csv
+  - expe_shear_tension_22.csv
+  - expe_simple_shear_22.csv
+  - expe_tension_22.csv
+  - expe_tension_shear_22.csv
+  - expe_tension_tension_22.csv
+  - kubc_bitension_22.csv
+  - kubc_shear_22.csv
+  - kubc_shear_tension_22.csv
+  - kubc_tension_22.csv
+  - kubc_tension_shear_22.csv
+  - kubc_tension_tension_22.csv
+  - kubc_willam_22.csv
+  - pbc_bitension_22.csv
+  - pbc_shear_22.csv
+  - pbc_shear_tension_22.csv
+  - pbc_tension_22.csv
+  - pbc_tension_shear_22.csv
+  - pbc_tension_tension_22.csv
+  - pbc_willam_22.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_shear_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_simple_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_tension_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+expe_tension_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_bitension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_shear_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_tension_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_tension_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+kubc_willam_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_bitension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_shear_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_tension_shear_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_tension_tension_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+pbc_willam_22.csv:
+[[ 4.96714455e+10 -1.38328431e+07]]
+
+Group 20 (Total 21 files):
+  - expe_bitension_0.csv
+  - expe_shear_0.csv
+  - expe_shear_tension_0.csv
+  - expe_simple_shear_0.csv
+  - expe_tension_0.csv
+  - expe_tension_shear_0.csv
+  - expe_tension_tension_0.csv
+  - kubc_bitension_0.csv
+  - kubc_shear_0.csv
+  - kubc_shear_tension_0.csv
+  - kubc_tension_0.csv
+  - kubc_tension_shear_0.csv
+  - kubc_tension_tension_0.csv
+  - kubc_willam_0.csv
+  - pbc_bitension_0.csv
+  - pbc_shear_0.csv
+  - pbc_shear_tension_0.csv
+  - pbc_tension_0.csv
+  - pbc_tension_shear_0.csv
+  - pbc_tension_tension_0.csv
+  - pbc_willam_0.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_shear_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_simple_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_tension_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+expe_tension_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_bitension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_shear_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_tension_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_tension_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+kubc_willam_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_bitension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_shear_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_tension_shear_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_tension_tension_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+pbc_willam_0.csv:
+[[ 4.97358876e+10 -7.79060894e+07]]
+
+Group 21 (Total 21 files):
+  - expe_bitension_5.csv
+  - expe_shear_5.csv
+  - expe_shear_tension_5.csv
+  - expe_simple_shear_5.csv
+  - expe_tension_5.csv
+  - expe_tension_shear_5.csv
+  - expe_tension_tension_5.csv
+  - kubc_bitension_5.csv
+  - kubc_shear_5.csv
+  - kubc_shear_tension_5.csv
+  - kubc_tension_5.csv
+  - kubc_tension_shear_5.csv
+  - kubc_tension_tension_5.csv
+  - kubc_willam_5.csv
+  - pbc_bitension_5.csv
+  - pbc_shear_5.csv
+  - pbc_shear_tension_5.csv
+  - pbc_tension_5.csv
+  - pbc_tension_shear_5.csv
+  - pbc_tension_tension_5.csv
+  - pbc_willam_5.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_shear_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_simple_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_tension_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+expe_tension_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_bitension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_shear_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_tension_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_tension_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+kubc_willam_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_bitension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_shear_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_tension_shear_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_tension_tension_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+pbc_willam_5.csv:
+[[ 4.97529249e+10 -4.02972562e+07]]
+
+Group 22 (Total 21 files):
+  - expe_bitension_2.csv
+  - expe_shear_2.csv
+  - expe_shear_tension_2.csv
+  - expe_simple_shear_2.csv
+  - expe_tension_2.csv
+  - expe_tension_shear_2.csv
+  - expe_tension_tension_2.csv
+  - kubc_bitension_2.csv
+  - kubc_shear_2.csv
+  - kubc_shear_tension_2.csv
+  - kubc_tension_2.csv
+  - kubc_tension_shear_2.csv
+  - kubc_tension_tension_2.csv
+  - kubc_willam_2.csv
+  - pbc_bitension_2.csv
+  - pbc_shear_2.csv
+  - pbc_shear_tension_2.csv
+  - pbc_tension_2.csv
+  - pbc_tension_shear_2.csv
+  - pbc_tension_tension_2.csv
+  - pbc_willam_2.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_shear_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_simple_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_tension_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+expe_tension_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_bitension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_shear_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_tension_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_tension_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+kubc_willam_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_bitension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_shear_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_tension_shear_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_tension_tension_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+pbc_willam_2.csv:
+[[ 4.97399868e+10 -4.47957021e+07]]
+
+Group 23 (Total 21 files):
+  - expe_bitension_20.csv
+  - expe_shear_20.csv
+  - expe_shear_tension_20.csv
+  - expe_simple_shear_20.csv
+  - expe_tension_20.csv
+  - expe_tension_shear_20.csv
+  - expe_tension_tension_20.csv
+  - kubc_bitension_20.csv
+  - kubc_shear_20.csv
+  - kubc_shear_tension_20.csv
+  - kubc_tension_20.csv
+  - kubc_tension_shear_20.csv
+  - kubc_tension_tension_20.csv
+  - kubc_willam_20.csv
+  - pbc_bitension_20.csv
+  - pbc_shear_20.csv
+  - pbc_shear_tension_20.csv
+  - pbc_tension_20.csv
+  - pbc_tension_shear_20.csv
+  - pbc_tension_tension_20.csv
+  - pbc_willam_20.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_shear_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_simple_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_tension_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+expe_tension_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_bitension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_shear_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_tension_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_tension_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+kubc_willam_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_bitension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_shear_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_tension_shear_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_tension_tension_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+pbc_willam_20.csv:
+[[4.98867130e+10 4.28615918e+07]]
+
+Group 24 (Total 21 files):
+  - expe_bitension_26.csv
+  - expe_shear_26.csv
+  - expe_shear_tension_26.csv
+  - expe_simple_shear_26.csv
+  - expe_tension_26.csv
+  - expe_tension_shear_26.csv
+  - expe_tension_tension_26.csv
+  - kubc_bitension_26.csv
+  - kubc_shear_26.csv
+  - kubc_shear_tension_26.csv
+  - kubc_tension_26.csv
+  - kubc_tension_shear_26.csv
+  - kubc_tension_tension_26.csv
+  - kubc_willam_26.csv
+  - pbc_bitension_26.csv
+  - pbc_shear_26.csv
+  - pbc_shear_tension_26.csv
+  - pbc_tension_26.csv
+  - pbc_tension_shear_26.csv
+  - pbc_tension_tension_26.csv
+  - pbc_willam_26.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_shear_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_simple_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_tension_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+expe_tension_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_bitension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_shear_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_tension_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_tension_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+kubc_willam_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_bitension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_shear_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_tension_shear_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_tension_tension_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+pbc_willam_26.csv:
+[[4.9737113e+10 5.5858770e+07]]
+
+Group 25 (Total 21 files):
+  - expe_bitension_32.csv
+  - expe_shear_32.csv
+  - expe_shear_tension_32.csv
+  - expe_simple_shear_32.csv
+  - expe_tension_32.csv
+  - expe_tension_shear_32.csv
+  - expe_tension_tension_32.csv
+  - kubc_bitension_32.csv
+  - kubc_shear_32.csv
+  - kubc_shear_tension_32.csv
+  - kubc_tension_32.csv
+  - kubc_tension_shear_32.csv
+  - kubc_tension_tension_32.csv
+  - kubc_willam_32.csv
+  - pbc_bitension_32.csv
+  - pbc_shear_32.csv
+  - pbc_shear_tension_32.csv
+  - pbc_tension_32.csv
+  - pbc_tension_shear_32.csv
+  - pbc_tension_tension_32.csv
+  - pbc_willam_32.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_shear_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_simple_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_tension_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+expe_tension_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_bitension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_shear_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_tension_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_tension_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+kubc_willam_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_bitension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_shear_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_tension_shear_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_tension_tension_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+pbc_willam_32.csv:
+[[4.97274654e+10 1.89641705e+07]]
+
+Group 26 (Total 21 files):
+  - expe_bitension_34.csv
+  - expe_shear_34.csv
+  - expe_shear_tension_34.csv
+  - expe_simple_shear_34.csv
+  - expe_tension_34.csv
+  - expe_tension_shear_34.csv
+  - expe_tension_tension_34.csv
+  - kubc_bitension_34.csv
+  - kubc_shear_34.csv
+  - kubc_shear_tension_34.csv
+  - kubc_tension_34.csv
+  - kubc_tension_shear_34.csv
+  - kubc_tension_tension_34.csv
+  - kubc_willam_34.csv
+  - pbc_bitension_34.csv
+  - pbc_shear_34.csv
+  - pbc_shear_tension_34.csv
+  - pbc_tension_34.csv
+  - pbc_tension_shear_34.csv
+  - pbc_tension_tension_34.csv
+  - pbc_willam_34.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_shear_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_simple_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_tension_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+expe_tension_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_bitension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_shear_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_tension_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_tension_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+kubc_willam_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_bitension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_shear_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_tension_shear_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_tension_tension_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+pbc_willam_34.csv:
+[[4.98629104e+10 8.45090158e+07]]
+
+Group 27 (Total 21 files):
+  - expe_bitension_33.csv
+  - expe_shear_33.csv
+  - expe_shear_tension_33.csv
+  - expe_simple_shear_33.csv
+  - expe_tension_33.csv
+  - expe_tension_shear_33.csv
+  - expe_tension_tension_33.csv
+  - kubc_bitension_33.csv
+  - kubc_shear_33.csv
+  - kubc_shear_tension_33.csv
+  - kubc_tension_33.csv
+  - kubc_tension_shear_33.csv
+  - kubc_tension_tension_33.csv
+  - kubc_willam_33.csv
+  - pbc_bitension_33.csv
+  - pbc_shear_33.csv
+  - pbc_shear_tension_33.csv
+  - pbc_tension_33.csv
+  - pbc_tension_shear_33.csv
+  - pbc_tension_tension_33.csv
+  - pbc_willam_33.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_shear_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_simple_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_tension_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+expe_tension_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_bitension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_shear_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_tension_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_tension_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+kubc_willam_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_bitension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_shear_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_tension_shear_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_tension_tension_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+pbc_willam_33.csv:
+[[4.97999402e+10 3.91157487e+07]]
+
+Group 28 (Total 21 files):
+  - expe_bitension_27.csv
+  - expe_shear_27.csv
+  - expe_shear_tension_27.csv
+  - expe_simple_shear_27.csv
+  - expe_tension_27.csv
+  - expe_tension_shear_27.csv
+  - expe_tension_tension_27.csv
+  - kubc_bitension_27.csv
+  - kubc_shear_27.csv
+  - kubc_shear_tension_27.csv
+  - kubc_tension_27.csv
+  - kubc_tension_shear_27.csv
+  - kubc_tension_tension_27.csv
+  - kubc_willam_27.csv
+  - pbc_bitension_27.csv
+  - pbc_shear_27.csv
+  - pbc_shear_tension_27.csv
+  - pbc_tension_27.csv
+  - pbc_tension_shear_27.csv
+  - pbc_tension_tension_27.csv
+  - pbc_willam_27.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_shear_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_simple_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_tension_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+expe_tension_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_bitension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_shear_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_tension_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_tension_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+kubc_willam_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_bitension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_shear_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_tension_shear_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_tension_tension_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+pbc_willam_27.csv:
+[[ 4.97190870e+10 -6.41244805e+07]]
+
+Group 29 (Total 21 files):
+  - expe_bitension_9.csv
+  - expe_shear_9.csv
+  - expe_shear_tension_9.csv
+  - expe_simple_shear_9.csv
+  - expe_tension_9.csv
+  - expe_tension_shear_9.csv
+  - expe_tension_tension_9.csv
+  - kubc_bitension_9.csv
+  - kubc_shear_9.csv
+  - kubc_shear_tension_9.csv
+  - kubc_tension_9.csv
+  - kubc_tension_shear_9.csv
+  - kubc_tension_tension_9.csv
+  - kubc_willam_9.csv
+  - pbc_bitension_9.csv
+  - pbc_shear_9.csv
+  - pbc_shear_tension_9.csv
+  - pbc_tension_9.csv
+  - pbc_tension_shear_9.csv
+  - pbc_tension_tension_9.csv
+  - pbc_willam_9.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_shear_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_simple_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_tension_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+expe_tension_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_bitension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_shear_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_tension_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_tension_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+kubc_willam_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_bitension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_shear_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_tension_shear_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_tension_tension_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+pbc_willam_9.csv:
+[[4.96822604e+10 6.12234173e+07]]
+
+Group 30 (Total 21 files):
+  - expe_bitension_21.csv
+  - expe_shear_21.csv
+  - expe_shear_tension_21.csv
+  - expe_simple_shear_21.csv
+  - expe_tension_21.csv
+  - expe_tension_shear_21.csv
+  - expe_tension_tension_21.csv
+  - kubc_bitension_21.csv
+  - kubc_shear_21.csv
+  - kubc_shear_tension_21.csv
+  - kubc_tension_21.csv
+  - kubc_tension_shear_21.csv
+  - kubc_tension_tension_21.csv
+  - kubc_willam_21.csv
+  - pbc_bitension_21.csv
+  - pbc_shear_21.csv
+  - pbc_shear_tension_21.csv
+  - pbc_tension_21.csv
+  - pbc_tension_shear_21.csv
+  - pbc_tension_tension_21.csv
+  - pbc_willam_21.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_shear_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_simple_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_tension_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+expe_tension_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_bitension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_shear_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_tension_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_tension_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+kubc_willam_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_bitension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_shear_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_tension_shear_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_tension_tension_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+pbc_willam_21.csv:
+[[4.97151047e+10 9.95222884e+06]]
+
+Group 31 (Total 21 files):
+  - expe_bitension_8.csv
+  - expe_shear_8.csv
+  - expe_shear_tension_8.csv
+  - expe_simple_shear_8.csv
+  - expe_tension_8.csv
+  - expe_tension_shear_8.csv
+  - expe_tension_tension_8.csv
+  - kubc_bitension_8.csv
+  - kubc_shear_8.csv
+  - kubc_shear_tension_8.csv
+  - kubc_tension_8.csv
+  - kubc_tension_shear_8.csv
+  - kubc_tension_tension_8.csv
+  - kubc_willam_8.csv
+  - pbc_bitension_8.csv
+  - pbc_shear_8.csv
+  - pbc_shear_tension_8.csv
+  - pbc_tension_8.csv
+  - pbc_tension_shear_8.csv
+  - pbc_tension_tension_8.csv
+  - pbc_willam_8.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_shear_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_simple_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_tension_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+expe_tension_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_bitension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_shear_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_tension_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_tension_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+kubc_willam_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_bitension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_shear_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_tension_shear_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_tension_tension_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+pbc_willam_8.csv:
+[[4.97601930e+10 7.46764556e+07]]
+
+Group 32 (Total 21 files):
+  - expe_bitension_35.csv
+  - expe_shear_35.csv
+  - expe_shear_tension_35.csv
+  - expe_simple_shear_35.csv
+  - expe_tension_35.csv
+  - expe_tension_shear_35.csv
+  - expe_tension_tension_35.csv
+  - kubc_bitension_35.csv
+  - kubc_shear_35.csv
+  - kubc_shear_tension_35.csv
+  - kubc_tension_35.csv
+  - kubc_tension_shear_35.csv
+  - kubc_tension_tension_35.csv
+  - kubc_willam_35.csv
+  - pbc_bitension_35.csv
+  - pbc_shear_35.csv
+  - pbc_shear_tension_35.csv
+  - pbc_tension_35.csv
+  - pbc_tension_shear_35.csv
+  - pbc_tension_tension_35.csv
+  - pbc_willam_35.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_shear_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_simple_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_tension_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+expe_tension_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_bitension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_shear_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_tension_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_tension_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+kubc_willam_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_bitension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_shear_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_tension_shear_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_tension_tension_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+pbc_willam_35.csv:
+[[4.97277488e+10 4.02679495e+07]]
+
+Group 33 (Total 21 files):
+  - expe_bitension_3.csv
+  - expe_shear_3.csv
+  - expe_shear_tension_3.csv
+  - expe_simple_shear_3.csv
+  - expe_tension_3.csv
+  - expe_tension_shear_3.csv
+  - expe_tension_tension_3.csv
+  - kubc_bitension_3.csv
+  - kubc_shear_3.csv
+  - kubc_shear_tension_3.csv
+  - kubc_tension_3.csv
+  - kubc_tension_shear_3.csv
+  - kubc_tension_tension_3.csv
+  - kubc_willam_3.csv
+  - pbc_bitension_3.csv
+  - pbc_shear_3.csv
+  - pbc_shear_tension_3.csv
+  - pbc_tension_3.csv
+  - pbc_tension_shear_3.csv
+  - pbc_tension_tension_3.csv
+  - pbc_willam_3.csv
+
+Averaged C Matrices in this group:
+
+expe_bitension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_shear_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_simple_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_tension_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+expe_tension_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_bitension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_shear_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_tension_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_tension_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+kubc_willam_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_bitension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_shear_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_tension_shear_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_tension_tension_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
+
+pbc_willam_3.csv:
+[[ 4.98013438e+10 -8.42415611e+06]]
