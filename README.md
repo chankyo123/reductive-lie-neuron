@@ -2,7 +2,7 @@
 
 **Official PyTorch implementation of "Reductive Lie Neurons"**
 <br>
-*(Currently Under Review for ICLR 2025)*
+<!-- *(Currently Under Review for ICLR 2025)* -->
 
 **Chankyo Kim¹*, Sicheng Zhao*, Minghan Zhu¹², Tzu-Yuan Lin³, Maani Ghaffari¹**
 <br>
@@ -10,7 +10,9 @@
 <br>
 *Equal contribution.
 
-[Project Website (Coming Soon)](#) | [Paper on ArXiv (Coming Soon)](#)
+<!-- [Project Website (Coming Soon)](#) | [Paper on ArXiv (Coming Soon)](#) -->
+[Project Website](https://reductive-lie-neuron.github.io/) | [Paper on arXiv](https://arxiv.org/abs/2510.22984)
+
 
 ---
 
@@ -151,12 +153,10 @@ You can reproduce the ablation studies in our paper by changing the `--arch` fla
 Our paper is currently under review. If you find our work useful, please cite the ArXiv preprint (link will be available here soon).
 
 ```bibtex
-@misc{kim2024reductive,
-      title={Equivariant neural networks for general linear symmetries on Lie algebras}, 
-      author={Chankyo Kim and Sicheng Zhao and Minghan Zhu and Tzu-Yuan Lin and Maani Ghaffari},
-      year={2024},
-      eprint={24XX.XXXXX},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{kim2025equivariant,
+  title={Equivariant Neural Networks for General Linear Symmetries on Lie Algebras},
+  author={Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
+  journal={arXiv preprint arXiv:2510.22984},
+  year={2025}
 }
 ```
