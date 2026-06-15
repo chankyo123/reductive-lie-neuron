@@ -120,7 +120,7 @@ tasks with **`GL(n)`-structured (center-sensitive) inputs**, to **semisimple fou
 | Regime | Benchmark(s) | Where |
 |--------|--------------|-------|
 | **① Native full `GL(n)`** | System identification (similarity `A ↦ T A T⁻¹`) | [`system-id/`](system-id/) |
-| **② `GL(n)`-structured inputs** (center-sensitive: covariance, scale) | Drone state estimation · 3D Gaussian Splatting | [`velocity-learning/`](velocity-learning/) · separate release |
+| **② `GL(n)`-structured inputs** (center-sensitive: covariance, scale) | Drone state estimation | [`velocity-learning/`](velocity-learning/) |
 | **③ Foundations & compatibility** (semisimple) | `sl(3)` / `sp(4)` algebraic · Lorentz top-tagging | [`relns/`](relns/) · [`LorentzNet-release/`](LorentzNet-release/) |
 
 > First download / generate each dataset as described below, then run from inside the experiment directory.
@@ -172,15 +172,7 @@ Compare against baselines by changing `--arch`:
 See [`velocity-learning/README.md`](velocity-learning/README.md) for evaluation and the EKF-filter pipeline
 (`src/main_filter.py`).
 
-### 3. 3D Gaussian Splatting — `GL(n)`-structured inputs
-
-Another center-sensitive setting: a 3D Gaussian couples a mean `μ ∈ ℝ³` with an anisotropic covariance
-`Σ ∈ SPD(3)` (`μ ↦ Rμ`, `Σ ↦ RΣRᵀ`). We rebuild the encoder/decoder of a Gaussian masked-autoencoder with ReLN
-blocks to enforce `GL(3)`-equivariance, keeping accuracy stable under arbitrary rotations where the baseline
-collapses. The ReLN-Gaussian-MAE code is maintained as a separate release (built on ShapeSplat / Gaussian-MAE);
-see the [project page](https://reductive-lie-neuron.github.io/).
-
-### 4. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` (foundations) &nbsp;(`relns/`)
+### 3. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` (foundations) &nbsp;(`relns/`)
 
 Semisimple regimes that verify the general `gl(n)` construction specializes correctly and stays backward-compatible
 with Lie Neurons.
@@ -201,7 +193,7 @@ python experiment/sl3_inv_test.py  --testing_config  config/sl3_inv/testing_para
 Swap the prefix to run the other benchmarks: `sl3_equiv`, `sp4_inv`, `gl2_solid`, `platonic_solid_cls`
 (matching `experiment/<name>_{train,test}.py` and `config/<name>/`).
 
-### 5. Particle physics: top-tagging — Lorentz group `SO(1,3)` (compatibility) &nbsp;(`LorentzNet-release/`)
+### 4. Particle physics: top-tagging — Lorentz group `SO(1,3)` (compatibility) &nbsp;(`LorentzNet-release/`)
 
 Download the converted top-tagging dataset (see [`LorentzNet-release/README.md`](LorentzNet-release/README.md)) into
 `./data/top/`, then:
