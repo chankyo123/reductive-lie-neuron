@@ -6,7 +6,7 @@ import torch.nn as nn
 from models.vn_layers import *
 from models.utils.vn_dgcnn_util import get_graph_feature_cross, get_vector_feature
 from models.lie_alg_util import *
-from models.lie_neurons_layers import *
+from models.reln_layers import *
 import time
 import torch
 from fvcore.nn import FlopCountAnalysis
@@ -42,13 +42,13 @@ def vn_conv1x1(in_planes, out_planes, stride=1):
     return conv1x1
 
 
-class LN_BasicBlock1D(nn.Module):
+class ReLN_BasicBlock1D(nn.Module):
     """ Supports: groups=1, dilation=1 """
 
     expansion = 1
 
     def __init__(self, in_planes, planes, stride=1, downsample=None):
-        super(LN_BasicBlock1D, self).__init__()
+        super(ReLN_BasicBlock1D, self).__init__()
         # Both self.conv1 and self.downsample layers downsample the input when stride != 1
         
         self.conv1 = conv3x1(in_planes, planes, stride)
@@ -270,13 +270,13 @@ class FcBlock(nn.Module):
         # print('x shape after fc3 : ', x.shape)  #[1024, 3, 1]
         return x
 
-class LNLinear_VNBatch_KillingRelu(nn.Module):
+class ReLNLinear_VNBatch_KillingRelu(nn.Module):
     def __init__(self, in_channels, out_channels, algebra_type='so3', share_nonlinearity=False, leaky_relu=False,negative_slope=0.2):
-        super(LNLinear_VNBatch_KillingRelu, self).__init__()
+        super(ReLNLinear_VNBatch_KillingRelu, self).__init__()
         self.share_nonlinearity = share_nonlinearity
-        self.linear = LNLinear(in_channels, out_channels)
+        self.linear = ReLNLinear(in_channels, out_channels)
         self.ln_bn = VNBatchNorm(out_channels, dim=4)
-        self.leaky_relu = LNKillingRelu(
+        self.leaky_relu = ReLNKillingRelu(
             out_channels, algebra_type=algebra_type, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, negative_slope=negative_slope)
 
     def forward(self, x, M1=torch.eye(3), M2=torch.eye(3)):
@@ -288,11 +288,11 @@ class LNLinear_VNBatch_KillingRelu(nn.Module):
         x_out = self.leaky_relu(x)
         return x
     
-class LNLinear_VNBatch_VNRelu(nn.Module):
+class ReLNLinear_VNBatch_VNRelu(nn.Module):
     def __init__(self, in_channels, out_channels, algebra_type='so3', share_nonlinearity=False, leaky_relu=False,negative_slope=0.2):
-        super(LNLinear_VNBatch_VNRelu, self).__init__()
+        super(ReLNLinear_VNBatch_VNRelu, self).__init__()
         self.share_nonlinearity = share_nonlinearity
-        self.linear = LNLinear(in_channels, out_channels)
+        self.linear = ReLNLinear(in_channels, out_channels)
         self.ln_bn = VNBatchNorm(out_channels, dim=4)
         self.leaky_relu = VNLeakyReLU(
             out_channels,
@@ -308,13 +308,13 @@ class LNLinear_VNBatch_VNRelu(nn.Module):
         x_out = self.leaky_relu(x)
         return x
     
-class LNLinear_VNBatch_Liebracket(nn.Module):
+class ReLNLinear_VNBatch_Liebracket(nn.Module):
     def __init__(self, in_channels, out_channels, algebra_type='so3', share_nonlinearity=False, negative_slope=0.2):
-        super(LNLinear_VNBatch_Liebracket, self).__init__()
+        super(ReLNLinear_VNBatch_Liebracket, self).__init__()
         self.share_nonlinearity = share_nonlinearity
-        self.linear = LNLinear(in_channels, out_channels)
+        self.linear = ReLNLinear(in_channels, out_channels)
         self.ln_bn = VNBatchNorm(out_channels, dim=4)
-        self.leaky_relu = LNLieBracket(out_channels, algebra_type='so3', share_nonlinearity=share_nonlinearity)
+        self.leaky_relu = ReLNLieBracket(out_channels, algebra_type='so3', share_nonlinearity=share_nonlinearity)
 
     def forward(self, x):
         '''
@@ -341,17 +341,17 @@ class SO3EquivariantReluBracketLayers(nn.Module):
         self.first_out_channel = 64
         self.inplanes = self.first_out_channel//div
         self.vn_bn = VNBatchNorm(64//3, dim=3)
-        # self.ln_bracket = LNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
-        self.ln_linear = LNLinear(in_dim//3, self.first_out_channel//3)
+        # self.ln_bracket = ReLNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
+        self.ln_linear = ReLNLinear(in_dim//3, self.first_out_channel//3)
         self.ln_conv = nn.Conv1d(in_dim//div, self.first_out_channel//div, kernel_size=7, stride=2, padding=3, bias=False)
         self.input_block_bn = VNBatchNorm(self.first_out_channel//3, dim=4)
         self.input_block_relu = VNLeakyReLU(self.first_out_channel//3,negative_slope=0.0)
-        self.liebracket = LNLieBracket(self.first_out_channel//3, algebra_type='so3', share_nonlinearity=share_nonlinearity)
+        self.liebracket = ReLNLieBracket(self.first_out_channel//3, algebra_type='so3', share_nonlinearity=share_nonlinearity)
         
         self.ln_pool = VNMeanPool_local(2)
         
-        # self.map_m_to_m1 = LNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
-        # self.map_m_to_m2 = LNLinear_VNBatch_Liebracket(256//div,256//div)
+        # self.map_m_to_m1 = ReLNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
+        # self.map_m_to_m2 = ReLNLinear_VNBatch_Liebracket(256//div,256//div)
 
         self.output_block1 = FcBlock(512//3*3, out_dim, 7)
         
@@ -361,11 +361,11 @@ class SO3EquivariantReluBracketLayers(nn.Module):
         self.residual_groups4 = self._make_residual_group1d(block_type, 512//3, group_sizes[3], stride=2)
         # self.ln_conv2 = nn.Conv1d(512//3, 512//3, kernel_size=7, stride=2, padding=3, bias=False)
         
-        # self.ln_fc = LNLinearAndKillingRelu(
+        # self.ln_fc = ReLNLinearAndKillingRelu(
         #     feat_dim, feat_dim, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, algebra_type='so3')
-        # self.ln_fc2 = LNLinearAndKillingRelu(
+        # self.ln_fc2 = ReLNLinearAndKillingRelu(
         #     feat_dim, feat_dim, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, algebra_type='so3')
-        # self.ln_fc_bracket2 = LNLinearAndLieBracket(feat_dim, feat_dim,share_nonlinearity=share_nonlinearity, algebra_type='so3')
+        # self.ln_fc_bracket2 = ReLNLinearAndLieBracket(feat_dim, feat_dim,share_nonlinearity=share_nonlinearity, algebra_type='so3')
         # self.fc_final = nn.Linear(feat_dim, 1, bias=False)
         self._initialize(zero_init_residual)
         
@@ -418,9 +418,9 @@ class SO3EquivariantReluBracketLayers(nn.Module):
                 # if isinstance(m, Bottleneck1D):
                 #     nn.init.constant_(m.bn3.weight, 0)
                 # print(m)
-                # if isinstance(m, LNLinearAndLieBracketChannelMix_VNBatchNorm):
+                # if isinstance(m, ReLNLinearAndLieBracketChannelMix_VNBatchNorm):
                 #     nn.init.constant_(m.ln_bn.bn.weight, 0)
-                if isinstance(m, LN_BasicBlock1D):
+                if isinstance(m, ReLN_BasicBlock1D):
                     nn.init.constant_(m.bn2.bn.weight, 0)
                     
     def get_num_params(self):

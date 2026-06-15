@@ -6,20 +6,20 @@
 # from network.vn_resnet_4res_2regress import VN_BasicBlock1D, VN_ResNet1D    #6D or 9D
 # from network.ln_2regress import SO3EquivariantReluBracketLayers    #6D or 9D
 # from network.ln_conv_2regress import SO3EquivariantReluBracketLayers    #6D or 9D
-# from network.ln_conv_2regress_less_param import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
-# from network.ln_conv_2regress import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
-# from network.ln_conv_2regress_nochannelmix import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
-# from network.ln_conv_2regress_nochannelmix_slope_1_largechannel_onechannelmix import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress_less_param import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress_nochannelmix import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress_nochannelmix_slope_1_largechannel_onechannelmix import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
 
-from network.ln_conv_2regress_nochannelmix_slope_1 import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
-from network.ln_conv_2regress_nochannelmix_slope_1_cov import LN_BasicBlock1D_cov, SO3EquivariantReluBracketLayers_cov    #6D or 9D
+from network.ln_conv_2regress_nochannelmix_slope_1 import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+from network.ln_conv_2regress_nochannelmix_slope_1_cov import ReLN_BasicBlock1D_cov, SO3EquivariantReluBracketLayers_cov    #6D or 9D
 from network.vn_conv_2regress_nochannelmix_slope_1_cov import VN_BasicBlock1D_cov, VN_ResNet1D_cov    #6D or 9D
 from network.vn_conv_2regress_nochannelmix_slope_1 import VN_BasicBlock1D, VN_ResNet1D    #6D or 9D
 from network.emlp_cov import EMLP_BasicBlock1D_cov, SO3EquivariantResNetEMLP_cov    #6D or 9D
 from network.emlp import EMLP_BasicBlock1D, SO3EquivariantResNetEMLP    #6D or 9D
 
-# from network.ln_conv_2regress_nochannelmix_slope_1_onechannelmix import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
-# from network.ln_conv_2regress_nochannelmix_slope_1_onechannelmix_param16_fc2 import LN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress_nochannelmix_slope_1_onechannelmix import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
+# from network.ln_conv_2regress_nochannelmix_slope_1_onechannelmix_param16_fc2 import ReLN_BasicBlock1D, SO3EquivariantReluBracketLayers    #6D or 9D
 
 # from network.eq_resnet_2res import VN_BasicBlock1D, VN_ResNet1D
 # from network.eq_resnet_1res import VN_BasicBlock1D, VN_ResNet1D
@@ -61,16 +61,16 @@ def get_model(arch, net_config, input_dim=6, output_dim=3):
         network = ResNetSeq1D(
             BasicBlock1D, input_dim, output_dim, [2, 2, 2, 2], net_config["in_dim"]
         )
-    elif arch == "ln_resnet":
+    elif arch == "reln_resnet":
             network = SO3EquivariantReluBracketLayers(
-                LN_BasicBlock1D,
+                ReLN_BasicBlock1D,
                 input_dim, output_dim, 
                 [2, 2, 2, 2],
                 net_config["in_dim"]
             )
-    elif arch == "ln_resnet_cov":
+    elif arch == "reln_resnet_cov":
             network = SO3EquivariantReluBracketLayers_cov(
-                LN_BasicBlock1D_cov,
+                ReLN_BasicBlock1D_cov,
                 input_dim, output_dim, 
                 [2, 2, 2, 2],
                 net_config["in_dim"]

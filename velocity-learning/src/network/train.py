@@ -527,7 +527,7 @@ def net_train(args):
         logging.info(f"time usage: {end_t - start_t:.3f}s")
 
         time_mem_log = osp.join(args.out_dir, 'time_mem_log.txt')
-        with open(time_mem_log, 'w') as log_file:''
+        with open(time_mem_log, 'w') as log_file:
             log_file.write(f"Epoch {epoch}: {end_t - start_t:.4f} seconds, {mem_used_max_GB:.3f}GB\n")
         consumed_times.append(end_t - start_t)    
             

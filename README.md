@@ -52,19 +52,19 @@ equivariant-layer library.
 
 | Path | What it is |
 |------|------------|
-| [`LieNeurons_reductive/`](LieNeurons_reductive/) | **Core library + algebraic benchmarks.** Equivariant layers in [`core/`](LieNeurons_reductive/core/); `sl(3)`, `sp(4)`, `gl(2)` and Platonic-solid experiments in `experiment/`. |
+| [`relns/`](relns/) | **Core library + algebraic benchmarks.** Equivariant layers in [`core/`](relns/core/); `sl(3)`, `sp(4)`, `gl(2)` and Platonic-solid experiments in `experiment/`. |
 | [`LorentzNet-release/`](LorentzNet-release/) | **Particle physics (Lorentz group `SO(1,3)`).** Top-tagging / quark-gluon-tagging with a ReLN-modified LorentzNet. |
 | [`velocity-learning/`](velocity-learning/) | **3D drone state estimation (`SO(3)` + uncertainty).** Jointly learns velocity and covariance for trajectory estimation. |
 | [`examples/quickstart.py`](examples/quickstart.py) | A 60-second tour of the core library (run this first). |
 | [`figures/`](figures/) | Figures used in the paper and this README. |
 
-### The core library — `LieNeurons_reductive/core/`
+### The core library — `relns/core/`
 
-- [`lie_alg_util.py`](LieNeurons_reductive/core/lie_alg_util.py) — `HatLayer` (vector ↔ matrix), `vee`, and
+- [`lie_alg_util.py`](relns/core/lie_alg_util.py) — `HatLayer` (vector ↔ matrix), `vee`, and
   `killingform` (the adjoint-invariant bilinear form `B`). Supports `so3`, `sl3`, `sl4`, `sp4`, `gl2`, `gl3`, `gl4`, `se3`.
-- [`lie_neurons_layers.py`](LieNeurons_reductive/core/lie_neurons_layers.py) — equivariant building blocks:
-  `LNLinear`, `LNKillingRelu`, `LNLieBracket`, `LNLinearAndKillingRelu`, `LNInvariant`, `LNMaxPool`, `LNBatchNorm`, …
-- [`vn_layers.py`](LieNeurons_reductive/core/vn_layers.py) — Vector Neurons (`SO(3)`) baseline layers.
+- [`reln_layers.py`](relns/core/reln_layers.py) — equivariant building blocks:
+  `ReLNLinear`, `ReLNKillingRelu`, `ReLNLieBracket`, `ReLNLinearAndKillingRelu`, `ReLNInvariant`, `ReLNMaxPool`, `ReLNBatchNorm`, …
+- [`vn_layers.py`](relns/core/vn_layers.py) — Vector Neurons (`SO(3)`) baseline layers.
 
 ---
 
@@ -100,7 +100,7 @@ Using the core library directly:
 
 ```python
 import torch
-from core.lie_alg_util import HatLayer, killingform   # run from LieNeurons_reductive/
+from core.lie_alg_util import HatLayer, killingform   # run from relns/
 
 hat = HatLayer("gl3")                       # maps a 9-vector to a 3x3 matrix in gl(3)
 X, Y = torch.randn(9), torch.randn(9)
@@ -115,10 +115,10 @@ B = killingform(hat(X), hat(Y), algebra_type="gl3")
 
 > First download / generate each dataset as described below, then run from inside the experiment directory.
 
-### 1. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` &nbsp;(`LieNeurons_reductive/`)
+### 1. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` &nbsp;(`relns/`)
 
 ```bash
-cd LieNeurons_reductive
+cd relns
 
 # (a) generate the dataset (scripts in data_gen/)
 python data_gen/gen_sl3_inv_data.py
@@ -160,7 +160,7 @@ python src/main_net.py \
     --mode train \
     --root_dir /path/to/drone_trajectories/ \
     --out_dir  ./outputs/reln_log_cov/ \
-    --arch ln_resnet_cov --input_dim 6 --epochs 200
+    --arch reln_resnet_cov --input_dim 6 --epochs 200
 ```
 
 Compare against baselines by changing `--arch`:
@@ -169,8 +169,8 @@ Compare against baselines by changing `--arch`:
 |----------|-------|
 | `resnet` | Non-equivariant ResNet |
 | `vn_resnet` / `vn_resnet_cov` | Vector Neurons (velocity / + covariance) |
-| `ln_resnet` | ReLN (velocity only) |
-| `ln_resnet_cov` | **ReLN (velocity + log-covariance), best** |
+| `reln_resnet` | ReLN (velocity only) |
+| `reln_resnet_cov` | **ReLN (velocity + log-covariance), best** |
 
 See [`velocity-learning/README.md`](velocity-learning/README.md) for evaluation and the EKF-filter pipeline
 (`src/main_filter.py`).

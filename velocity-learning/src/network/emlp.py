@@ -6,7 +6,7 @@ import torch.nn as nn
 from models.vn_layers import *
 from models.utils.vn_dgcnn_util import get_graph_feature_cross, get_lie_algebra_feature
 from models.lie_alg_util import *
-from models.lie_neurons_layers import *
+from models.reln_layers import *
 import time
 import torch
 from fvcore.nn import FlopCountAnalysis

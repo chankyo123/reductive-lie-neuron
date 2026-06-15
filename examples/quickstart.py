@@ -23,13 +23,13 @@ from pathlib import Path
 
 import torch
 
-# The core library lives in LieNeurons_reductive/core and expects that
+# The core library lives in relns/core and expects that
 # directory on the path (its modules do `from core.lie_alg_util import *`).
-LIB_ROOT = Path(__file__).resolve().parent.parent / "LieNeurons_reductive"
+LIB_ROOT = Path(__file__).resolve().parent.parent / "relns"
 sys.path.insert(0, str(LIB_ROOT))
 
 from core.lie_alg_util import HatLayer, vee, killingform, lie_bracket  # noqa: E402
-from core.lie_neurons_layers import LNLinearAndKillingRelu             # noqa: E402
+from core.reln_layers import ReLNLinearAndKillingRelu             # noqa: E402
 
 
 def demo_adjoint_invariant_form():
@@ -78,8 +78,8 @@ def demo_equivariant_forward():
     x = torch.randn(B, F, K, N)
 
     net = torch.nn.Sequential(
-        LNLinearAndKillingRelu(F, 16, algebra_type="sl3", share_nonlinearity=False),
-        LNLinearAndKillingRelu(16, 8, algebra_type="sl3", share_nonlinearity=False),
+        ReLNLinearAndKillingRelu(F, 16, algebra_type="sl3", share_nonlinearity=False),
+        ReLNLinearAndKillingRelu(16, 8, algebra_type="sl3", share_nonlinearity=False),
     )
 
     with torch.no_grad():
@@ -88,7 +88,7 @@ def demo_equivariant_forward():
     print(f"  input  shape: {tuple(x.shape)}   [B, F, dim(sl3)=8, N]")
     print(f"  output shape: {tuple(y.shape)}")
     print("  OK: the ReLN layers are equivariant by construction.")
-    print("  (See LieNeurons_reductive/experiment/sl3_inv_* for full equivariance tests.)\n")
+    print("  (See relns/experiment/sl3_inv_* for full equivariance tests.)\n")
 
 
 if __name__ == "__main__":

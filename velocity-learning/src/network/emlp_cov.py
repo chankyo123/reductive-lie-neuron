@@ -6,7 +6,7 @@ import torch.nn as nn
 from models.vn_layers import *
 from models.utils.vn_dgcnn_util import get_graph_feature_cross, get_lie_algebra_feature
 from models.lie_alg_util import *
-from models.lie_neurons_layers import *
+from models.reln_layers import *
 import time
 import torch
 from fvcore.nn import FlopCountAnalysis
@@ -169,17 +169,17 @@ class EMLP_cov(nn.Module):
         self.num_m_feature = 64
         self.first_out_channel = 64
         self.inplanes = self.first_out_channel//div
-        # self.ln_bracket = LNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
-        self.ln_linear = LNLinear(in_dim//3, self.first_out_channel//3)
+        # self.ln_bracket = ReLNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
+        self.ln_linear = ReLNLinear(in_dim//3, self.first_out_channel//3)
         self.ln_conv = nn.Conv1d(in_dim//div, self.first_out_channel//div, kernel_size=7, stride=2, padding=3, bias=False)
-        self.input_block_bn = LNBatchNorm(self.first_out_channel//3)
+        self.input_block_bn = ReLNBatchNorm(self.first_out_channel//3)
         # self.input_block_relu = VNLeakyReLU(self.first_out_channel//3,negative_slope=0.0)
-        self.liebracket = LNLieBracket(self.first_out_channel//3, algebra_type='gl3', share_nonlinearity=share_nonlinearity)
+        self.liebracket = ReLNLieBracket(self.first_out_channel//3, algebra_type='gl3', share_nonlinearity=share_nonlinearity)
         
         self.ln_pool = VNMeanPool_local(2)
         
-        # self.map_m_to_m1 = LNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
-        # self.map_m_to_m2 = LNLinear_VNBatch_Liebracket(256//div,256//div)
+        # self.map_m_to_m1 = ReLNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
+        # self.map_m_to_m2 = ReLNLinear_VNBatch_Liebracket(256//div,256//div)
 
         self.output_block1 = FcBlock(512//3*3, out_dim, 7)
         
@@ -189,11 +189,11 @@ class EMLP_cov(nn.Module):
         self.residual_groups4 = self._make_residual_group1d(block_type, 512//3, group_sizes[3], stride=2)
         # self.ln_conv2 = nn.Conv1d(512//3, 512//3, kernel_size=7, stride=2, padding=3, bias=False)
         
-        # self.ln_fc = LNLinearAndKillingRelu(
+        # self.ln_fc = ReLNLinearAndKillingRelu(
         #     feat_dim, feat_dim, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, algebra_type='so3')
-        # self.ln_fc2 = LNLinearAndKillingRelu(
+        # self.ln_fc2 = ReLNLinearAndKillingRelu(
         #     feat_dim, feat_dim, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, algebra_type='so3')
-        # self.ln_fc_bracket2 = LNLinearAndLieBracket(feat_dim, feat_dim,share_nonlinearity=share_nonlinearity, algebra_type='so3')
+        # self.ln_fc_bracket2 = ReLNLinearAndLieBracket(feat_dim, feat_dim,share_nonlinearity=share_nonlinearity, algebra_type='so3')
         # self.fc_final = nn.Linear(feat_dim, 1, bias=False)
         self._initialize(zero_init_residual)
         
@@ -203,7 +203,7 @@ class EMLP_cov(nn.Module):
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
                 conv1x1(self.inplanes, planes * block.expansion, stride=stride),
-                LNBatchNorm(planes * block.expansion), 
+                ReLNBatchNorm(planes * block.expansion), 
             )
 
         layers = []
@@ -246,9 +246,9 @@ class EMLP_cov(nn.Module):
                 # if isinstance(m, Bottleneck1D):
                 #     nn.init.constant_(m.bn3.weight, 0)
                 # print(m)
-                # if isinstance(m, LNLinearAndLieBracketChannelMix_VNBatchNorm):
+                # if isinstance(m, ReLNLinearAndLieBracketChannelMix_VNBatchNorm):
                 #     nn.init.constant_(m.ln_bn.bn.weight, 0)
-                if isinstance(m, LN_BasicBlock1D_cov):
+                if isinstance(m, ReLN_BasicBlock1D_cov):
                     nn.init.constant_(m.bn2.bn.weight, 0)
                     
     def get_num_params(self):

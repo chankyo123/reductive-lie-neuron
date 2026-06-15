@@ -6,7 +6,7 @@ import torch.nn as nn
 from models.vn_layers import *
 from models.utils.vn_dgcnn_util import get_graph_feature_cross, get_lie_algebra_feature
 from models.lie_alg_util import *
-from models.lie_neurons_layers import *
+from models.reln_layers import *
 import time
 import torch
 from fvcore.nn import FlopCountAnalysis
@@ -302,13 +302,13 @@ class InvariantMLP(nn.Module):
         scale = self.mlp(x)               # (B, output_dim)
         return scale
     
-class LNLinear_VNBatch_KillingRelu(nn.Module):
+class ReLNLinear_VNBatch_KillingRelu(nn.Module):
     def __init__(self, in_channels, out_channels, algebra_type='so3', share_nonlinearity=False, leaky_relu=False,negative_slope=0.2):
-        super(LNLinear_VNBatch_KillingRelu, self).__init__()
+        super(ReLNLinear_VNBatch_KillingRelu, self).__init__()
         self.share_nonlinearity = share_nonlinearity
-        self.linear = LNLinear(in_channels, out_channels)
+        self.linear = ReLNLinear(in_channels, out_channels)
         self.ln_bn = VNBatchNorm(out_channels, dim=4)
-        self.leaky_relu = LNKillingRelu(
+        self.leaky_relu = ReLNKillingRelu(
             out_channels, algebra_type=algebra_type, share_nonlinearity=share_nonlinearity, leaky_relu=leaky_relu, negative_slope=negative_slope)
 
     def forward(self, x, M1=torch.eye(3), M2=torch.eye(3)):
@@ -359,7 +359,7 @@ class VN_ResNet1D(nn.Module):
         self.num_m_feature = 64
         self.first_out_channel = 64
         self.inplanes = self.first_out_channel//div
-        # self.ln_bracket = LNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
+        # self.ln_bracket = ReLNLinearAndLieBracket(in_dim//3, self.num_m_feature//3, share_nonlinearity=share_nonlinearity, algebra_type='so3')
         self.input_block_conv  = nn.Conv1d(in_dim//div, 64//div, kernel_size=7, stride=2, padding=3, bias=False)
         self.ln_conv = nn.Conv1d(in_dim//div, self.first_out_channel//div, kernel_size=7, stride=2, padding=3, bias=False)
         self.input_block_bn = VNBatchNorm(self.base_plane, dim=4)
@@ -368,8 +368,8 @@ class VN_ResNet1D(nn.Module):
         # self.local_pool = nn.AvgPool1d(kernel_size=3, stride=2, padding=1)
         self.local_pool = VNMeanPool_local(2)
         
-        # self.map_m_to_m1 = LNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
-        # self.map_m_to_m2 = LNLinear_VNBatch_Liebracket(256//div,256//div)
+        # self.map_m_to_m1 = ReLNLinear_VNBatch_VNRelu(self.first_out_channel//div,self.first_out_channel//div, negative_slope=0.0)
+        # self.map_m_to_m2 = ReLNLinear_VNBatch_Liebracket(256//div,256//div)
 
         self.output_block1 = FcBlock(512//3*3, out_dim, 7)
         

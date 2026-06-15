@@ -135,7 +135,7 @@ class VNBatchNorm(nn.Module):
         
         return x
 
-class LNBatchNorm(nn.Module):
+class ReLNBatchNorm(nn.Module):
     """
     SO(3) adjoint equivariant Batch Normalization for 9D features
     representing 3x3 matrices.
