@@ -426,11 +426,8 @@ def killingform_gl2(x_hat, d_hat, feature_wise=False):
     """
     x_hat: tensor with last two dimensions 3x3 representing elements in gl(3, R)
     d_hat: tensor with last two dimensions 3x3 representing elements in gl(3, R)
-    Bilinear form for gl3 is 6*tr(x_hat d_hat) - tr(x_hat) tr(d_hat)
+    Bilinear form for gl2 is 4*tr(x_hat d_hat) - tr(x_hat) tr(d_hat)
     """
-    print(x_hat.shape, d_hat.shape) #[1, 3, 100, 2, 2]
-    print(x_hat[0,0,0,:,:])
-    print(d_hat[0,0,0,:,:])
     if not feature_wise:
         tr_xy = (x_hat.transpose(-1, -2) * d_hat).sum(dim=(-1, -2))
         # Compute tr(X) and tr(Y) as sum of diagonals for 2x2 matrices
@@ -481,7 +478,6 @@ def killingform_gl4(x_hat, d_hat, feature_wise=False):
     d_hat: tensor with last two dimensions 4x4 representing elements in gl(4, R)
     Bilinear form for gl4 is 8*tr(x_hat d_hat) - tr(x_hat) tr(d_hat)
     """
-    print("killing form for gl4")
     if not feature_wise:
         # Compute tr(XY)
         tr_xy = (x_hat.transpose(-1, -2) * d_hat).sum(dim=(-1, -2))

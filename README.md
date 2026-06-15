@@ -1,162 +1,201 @@
-# Equivariant neural networks for general linear symmetries on Lie algebras
+<h1 align="center">Reductive Lie Neurons (ReLNs)</h1>
+<h3 align="center">Equivariant Neural Networks for General Linear Symmetries on Lie Algebras</h3>
 
-**Official PyTorch implementation of "Reductive Lie Neurons"**
-<br>
-<!-- *(Currently Under Review for ICLR 2025)* -->
+<p align="center">
+  Chankyo Kim<sup>1*</sup>&nbsp;&nbsp; Sicheng Zhao<sup>1*</sup>&nbsp;&nbsp; Minghan Zhu<sup>1,2</sup>&nbsp;&nbsp; Tzu-Yuan Lin<sup>3</sup>&nbsp;&nbsp; Maani Ghaffari<sup>1</sup>
+  <br>
+  <sup>1</sup>University of Michigan&nbsp;&nbsp; <sup>2</sup>University of Pennsylvania&nbsp;&nbsp; <sup>3</sup>MIT&nbsp;&nbsp;&nbsp;<sup>*</sup>Equal contribution
+</p>
 
-**Chankyo Kim¹*, Sicheng Zhao*, Minghan Zhu¹², Tzu-Yuan Lin³, Maani Ghaffari¹**
-<br>
-¹University of Michigan, ²University of Pennsylvania, ³Massachusetts Institute of Technology
-<br>
-*Equal contribution.
+<p align="center">
+  <a href="https://arxiv.org/abs/2510.22984"><img src="https://img.shields.io/badge/arXiv-2510.22984-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://reductive-lie-neuron.github.io/"><img src="https://img.shields.io/badge/Project-Page-6c4ee0.svg" alt="Project Page"></a>
+  <img src="https://img.shields.io/badge/ICML-2026-1f6feb.svg" alt="ICML 2026">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
+</p>
 
-<!-- [Project Website (Coming Soon)](#) | [Paper on ArXiv (Coming Soon)](#) -->
-[Project Website](https://reductive-lie-neuron.github.io/) | [Paper on arXiv](https://arxiv.org/abs/2510.22984)
+<p align="center">
+  <img src="figures/applications.png" alt="ReLNs apply across many Lie group symmetries" width="85%">
+</p>
 
+> **TL;DR** &mdash; Most equivariant networks only handle simple symmetries like rotations. **ReLNs** are exactly
+> equivariant to *general linear* symmetries **GL(n)**, operating directly on Lie-algebraic features and matrix-valued
+> inputs through a single adjoint-invariant bilinear layer &mdash; no per-subgroup redesign.
 
 ---
 
 ## About
 
-Encoding symmetries is a powerful inductive bias for improving the generalization of deep neural networks. However, most existing equivariant models are limited to simple symmetries like rotations, failing to address the broader class of general linear transformations, GL(n), that appear in many scientific domains. We introduce **Reductive Lie Neurons (ReLNs)**, a novel neural network architecture exactly equivariant to these general linear symmetries.
+Encoding symmetries is a powerful inductive bias for deep networks, but most equivariant models are limited to compact
+groups such as rotations and cannot address the broader class of general linear transformations **GL(n)** that appear
+across science. **Reductive Lie Neurons (ReLNs)** are exactly equivariant to these general linear symmetries and operate
+directly on structured inputs, including general `n×n` matrices.
 
-<img src="figures/applications.png" alt="Applications of ReLN across various scientific domains" width="70%">
+The key ingredient is a non-degenerate, **adjoint-invariant bilinear form** defined for any reductive matrix Lie algebra
+(e.g. `gl(n)`), generalizing the Killing form (which is degenerate on `gl(n)`):
 
-*ReLNs are applicable to a wide range of scientific domains governed by diverse Lie group symmetries, from physics and robotics to computer vision.*
+```
+B(X, Y) = 2n·tr(XY) − tr(X)·tr(Y)
+```
 
-Unlike previous methods like [LieNeurons](https://github.com/UMich-CURLY/LieNeurons), which are tailored for semi-simple Lie algebras (e.g., `so(3)`), our work introduces a general approach to construct **non-degenerate bilinear forms for any `n x n` matrix Lie algebra**, including reductive ones like `gl(n)`. This allows for the principled design of equivariant layers and nonlinearities for a much broader class of symmetries.
-
-This repository provides the official code to reproduce the experiments in our paper.
+Because `B` is invariant under the adjoint action `Ad_g` for any `g ∈ GL(n)`, the layers built on top of it are
+equivariant by construction. Unlike prior methods such as [Lie Neurons](https://github.com/UMich-CURLY/LieNeurons)
+(restricted to semi-simple algebras like `so(3)`, `sl(3)`), ReLNs handle reductive algebras and matrix-valued data
+within one framework.
 
 ---
 
-## Core Concept: Adjoint Equivariance by Design
+## Repository structure
 
-A key contribution of our work is a unified framework that embeds diverse geometric inputs (like vectors and covariance matrices) into a common Lie algebra, where they transform consistently under the **adjoint action**. Our network is designed to commute with this action, guaranteeing equivariance.
+This repository bundles the three experiment suites from the paper, each runnable on its own, plus the shared
+equivariant-layer library.
 
-<img src="figures/equivariance_diagram.png" alt="Equivariance Diagram" width="60%">
+| Path | What it is |
+|------|------------|
+| [`LieNeurons_reductive/`](LieNeurons_reductive/) | **Core library + algebraic benchmarks.** Equivariant layers in [`core/`](LieNeurons_reductive/core/); `sl(3)`, `sp(4)`, `gl(2)` and Platonic-solid experiments in `experiment/`. |
+| [`LorentzNet-release/`](LorentzNet-release/) | **Particle physics (Lorentz group `SO(1,3)`).** Top-tagging / quark-gluon-tagging with a ReLN-modified LorentzNet. |
+| [`velocity-learning/`](velocity-learning/) | **3D drone state estimation (`SO(3)` + uncertainty).** Jointly learns velocity and covariance for trajectory estimation. |
+| [`examples/quickstart.py`](examples/quickstart.py) | A 60-second tour of the core library (run this first). |
+| [`figures/`](figures/) | Figures used in the paper and this README. |
 
-*Our network `f` is provably equivariant. A transformation `Ad_g` on the input results in the same transformation `Ad_g` on the output feature.*
+### The core library — `LieNeurons_reductive/core/`
 
-To achieve this for general reductive algebras like `gl(n)`, we introduce a non-degenerate, Ad-invariant bilinear form:
-
-`B(X, Y) = 2n * tr(XY) - tr(X)tr(Y)`
-
-This form is the fundamental tool used to build our equivariant layers. Here’s a simple code snippet demonstrating how it creates an invariant feature:
-
-```python
-# From core/layers.py
-import torch
-
-class LNInvariant(nn.Module):
-    """
-    Computes an invariant scalar feature from a Lie algebra element
-    using our non-degenerate bilinear form.
-    """
-    def __init__(self, in_channels, algebra_type='gl3'):
-        super(LNInvariant, self).__init__()
-        self.hat_layer = HatLayer(algebra_type) # Maps vector to matrix
-        self.algebra_type = algebra_type
-
-    def forward(self, x):
-        """
-        Input x: Lie algebra vectors
-        Output: Invariant scalars
-        """
-        # 1. Map vector representation to matrix representation
-        x_hat = self.hat_layer(x)
-
-        # 2. Compute the invariant using the bilinear form B(X, X)
-        invariant_scalar = killingform(x_hat, x_hat, self.algebra_type)
-
-        # 3. Aggregate features (e.g., via mean)
-        return invariant_scalar.mean(dim=[-2, -1])
-```
-
-For a more detailed interactive example, please see our [Toy Problem Notebook](examples/toy_problem.ipynb).
+- [`lie_alg_util.py`](LieNeurons_reductive/core/lie_alg_util.py) — `HatLayer` (vector ↔ matrix), `vee`, and
+  `killingform` (the adjoint-invariant bilinear form `B`). Supports `so3`, `sl3`, `sl4`, `sp4`, `gl2`, `gl3`, `gl4`, `se3`.
+- [`lie_neurons_layers.py`](LieNeurons_reductive/core/lie_neurons_layers.py) — equivariant building blocks:
+  `LNLinear`, `LNKillingRelu`, `LNLieBracket`, `LNLinearAndKillingRelu`, `LNInvariant`, `LNMaxPool`, `LNBatchNorm`, …
+- [`vn_layers.py`](LieNeurons_reductive/core/vn_layers.py) — Vector Neurons (`SO(3)`) baseline layers.
 
 ---
 
 ## Installation
 
-To set up the environment, please follow these steps:
-
 ```bash
-# Clone the repository
-git clone [https://github.com/chankyo123/reductive-lie-neuron.git](https://github.com/chankyo123/reductive-lie-neuron.git)
+git clone https://github.com/chankyo123/reductive-lie-neuron.git
 cd reductive-lie-neuron
 ```
-Each experiment has its own set of dependencies. Please refer to the `README` file within each experiment's directory (e.g., `experiments/lorentznet/`) for specific installation instructions.
+
+The core library needs `torch`, `numpy`, and `einops`:
+
+```bash
+pip install torch numpy einops pyyaml
+```
+
+Each experiment has additional, sometimes conflicting, dependencies (different particle-physics / robotics stacks), so
+we keep them isolated. See the per-directory README and `requirements.txt`:
+[`LorentzNet-release/requirements.txt`](LorentzNet-release/requirements.txt),
+[`velocity-learning/requirements.txt`](velocity-learning/requirements.txt) (or `environment.yaml`).
 
 ---
 
-## Reproducing Paper Results
+## Quick start
 
-All experiment scripts are located in the `experiments/` directory. For each experiment, first download the required dataset and place it in the corresponding `data/` subfolder.
-
-### Algebraic Benchmarks (`sl(3)` and `sp(4)`)
-These experiments reproduce the Platonic Solid Classification and `sp(4)` Invariant Function Regression results. Our model directly adopts the architecture from Lie Neurons, replacing only the bilinear form.
-
-For detailed instructions on data generation, training, and evaluation for these benchmarks, please refer to the original **[LieNeurons GitHub repository](https://github.com/UMich-CURLY/LieNeurons)**.
-
-### Particle Physics: Top-Tagging (`SO(1,3)`)
-This experiment reproduces the Top-Tagging benchmark results. The following command trains our ReLN-based model.
+Run the guided tour, which verifies the adjoint invariance of the bilinear form and runs a small equivariant stack:
 
 ```bash
-# Navigate to the experiment directory
-cd experiments/lorentznet/
-
-# Run training
-torchrun --nproc_per_node=1 top_tagging.py \
-    --batch_size=32 \
-    --epochs=35 \
-    --warmup_epochs=4 \
-    --n_layers=5 \
-    --n_hidden=48 \
-    --lr=0.001 \
-    --weight_decay=0.01 \
-    --exp_name=reln_top_tagging_repro \
-    --datadir ./data/toptag/
+python examples/quickstart.py
 ```
 
-### Drone State Estimation (`SO(3)` with Uncertainty)
-This experiment reproduces the drone trajectory estimation results. The main script allows you to train different model architectures by changing the `--arch` flag.
+Using the core library directly:
 
-**To train our best-performing model (ReLN with log-covariance):**
+```python
+import torch
+from core.lie_alg_util import HatLayer, killingform   # run from LieNeurons_reductive/
+
+hat = HatLayer("gl3")                       # maps a 9-vector to a 3x3 matrix in gl(3)
+X, Y = torch.randn(9), torch.randn(9)
+
+# Adjoint-invariant scalar  B(X, Y) = 2n·tr(XY) − tr(X)tr(Y)
+B = killingform(hat(X), hat(Y), algebra_type="gl3")
+```
+
+---
+
+## Reproducing the paper experiments
+
+> First download / generate each dataset as described below, then run from inside the experiment directory.
+
+### 1. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` &nbsp;(`LieNeurons_reductive/`)
+
 ```bash
-# Navigate to the experiment directory
-cd experiments/velocity_learning/
+cd LieNeurons_reductive
 
-# Run training for the main ReLN model
-python3 src/main_net.py \
+# (a) generate the dataset (scripts in data_gen/)
+python data_gen/gen_sl3_inv_data.py
+
+# (b) train (each experiment reads a YAML config)
+python experiment/sl3_inv_train.py --training_config config/sl3_inv/training_param.yaml
+
+# (c) test
+python experiment/sl3_inv_test.py  --testing_config  config/sl3_inv/testing_param.yaml
+```
+
+Swap the prefix to run the other benchmarks: `sl3_equiv`, `sp4_inv`, `gl2_solid`, `platonic_solid_cls`
+(matching `experiment/<name>_{train,test}.py` and `config/<name>/`).
+
+### 2. Particle physics: top-tagging — Lorentz group `SO(1,3)` &nbsp;(`LorentzNet-release/`)
+
+Download the converted top-tagging dataset (see [`LorentzNet-release/README.md`](LorentzNet-release/README.md)) into
+`./data/top/`, then:
+
+```bash
+cd LorentzNet-release
+
+torchrun --nproc_per_node=4 top_tagging.py \
+    --batch_size=32 --epochs=35 --warmup_epochs=5 \
+    --n_layers=6 --n_hidden=72 --lr=0.001 \
+    --c_weight=0.005 --dropout=0.2 --weight_decay=0.01 \
+    --exp_name=reln_top_tagging
+```
+
+Add `--test_mode` (with the same `--exp_name`) to evaluate. Reduce `--nproc_per_node` to your GPU count.
+
+### 3. Drone state estimation — `SO(3)` with uncertainty &nbsp;(`velocity-learning/`)
+
+```bash
+cd velocity-learning
+
+# best model: ReLN processing velocity + log-covariance
+python src/main_net.py \
     --mode train \
-    --root_dir ./data/drone_trajectories/ \
-    --out_dir ./results/reln_log_cov/ \
-    --epochs 200 \
-    --arch ln_resnet_cov \
-    --input_dim 6 
+    --root_dir /path/to/drone_trajectories/ \
+    --out_dir  ./outputs/reln_log_cov/ \
+    --arch ln_resnet_cov --input_dim 6 --epochs 200
 ```
 
-**To train other baseline models for comparison:**
+Compare against baselines by changing `--arch`:
 
-You can reproduce the ablation studies in our paper by changing the `--arch` flag. Key architectures include:
+| `--arch` | Model |
+|----------|-------|
+| `resnet` | Non-equivariant ResNet |
+| `vn_resnet` / `vn_resnet_cov` | Vector Neurons (velocity / + covariance) |
+| `ln_resnet` | ReLN (velocity only) |
+| `ln_resnet_cov` | **ReLN (velocity + log-covariance), best** |
 
-* `--arch resnet`: Non-equivariant ResNet baseline.
-* `--arch vn_resnet`: Equivariant Vector Neurons (VN) baseline (velocity only).
-* `--arch vn_resnet_cov`: VN baseline adapted for covariance.
-* `--arch ln_resnet`: Our ReLN model using only velocity information.
+See [`velocity-learning/README.md`](velocity-learning/README.md) for evaluation and the EKF-filter pipeline
+(`src/main_filter.py`).
 
 ---
 
 ## Citation
 
-Our paper is currently under review. If you find our work useful, please cite the ArXiv preprint (link will be available here soon).
+If you find this work useful, please cite:
 
 ```bibtex
-@article{kim2025equivariant,
-  title={Equivariant Neural Networks for General Linear Symmetries on Lie Algebras},
-  author={Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
-  journal={arXiv preprint arXiv:2510.22984},
-  year={2025}
+@inproceedings{kim2026equivariant,
+  title     = {Equivariant Neural Networks for General Linear Symmetries on Lie Algebras},
+  author    = {Kim, Chankyo and Zhao, Sicheng and Zhu, Minghan and Lin, Tzu-Yuan and Ghaffari, Maani},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year      = {2026}
 }
 ```
+
+## Acknowledgments
+
+This codebase builds on several excellent open-source projects:
+[Lie Neurons](https://github.com/UMich-CURLY/LieNeurons),
+[LorentzNet](https://github.com/sdogsq/LorentzNet-release),
+[Vector Neurons](https://github.com/FlyingGiraffe/vnn), and
+[TLIO](https://github.com/CathIAS/TLIO). We thank the authors for releasing their code.
+
+Released under the [MIT License](LICENSE).
