@@ -55,6 +55,7 @@ equivariant-layer library.
 | [`relns/`](relns/) | **Core library + algebraic benchmarks.** Equivariant layers in [`core/`](relns/core/); `sl(3)`, `sp(4)`, `gl(2)` and Platonic-solid experiments in `experiment/`. |
 | [`LorentzNet-release/`](LorentzNet-release/) | **Particle physics (Lorentz group `SO(1,3)`).** Top-tagging / quark-gluon-tagging with a ReLN-modified LorentzNet. |
 | [`velocity-learning/`](velocity-learning/) | **3D drone state estimation (`SO(3)` + uncertainty).** Jointly learns velocity and covariance for trajectory estimation. |
+| [`system-id/`](system-id/) | **GL(n) system identification.** Native full-`GL(n)` adjoint-equivariance benchmark: recover global dynamics `A` from noisy local least-squares estimates under basis changes `A ↦ T A T⁻¹`. |
 | [`examples/quickstart.py`](examples/quickstart.py) | A 60-second tour of the core library (run this first). |
 | [`figures/`](figures/) | Figures used in the paper and this README. |
 
@@ -113,44 +114,40 @@ B = killingform(hat(X), hat(Y), algebra_type="gl3")
 
 ## Reproducing the paper experiments
 
+The benchmarks are ordered by the paper's roadmap — from tasks whose **native symmetry is the full `GL(n)`**, through
+tasks with **`GL(n)`-structured (center-sensitive) inputs**, to **semisimple foundations / compatibility** checks:
+
+| Regime | Benchmark(s) | Where |
+|--------|--------------|-------|
+| **① Native full `GL(n)`** | System identification (similarity `A ↦ T A T⁻¹`) | [`system-id/`](system-id/) |
+| **② `GL(n)`-structured inputs** (center-sensitive: covariance, scale) | Drone state estimation · 3D Gaussian Splatting | [`velocity-learning/`](velocity-learning/) · separate release |
+| **③ Foundations & compatibility** (semisimple) | `sl(3)` / `sp(4)` algebraic · Lorentz top-tagging | [`relns/`](relns/) · [`LorentzNet-release/`](LorentzNet-release/) |
+
 > First download / generate each dataset as described below, then run from inside the experiment directory.
 
-### 1. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` &nbsp;(`relns/`)
+### 1. GL(n) system identification — native full `GL(n)` &nbsp;(`system-id/`)
+
+The headline case where the task symmetry is genuinely reductive: under a latent basis change `x' = T x`, the
+dynamics transform by similarity `A ↦ T A T⁻¹`, so the trace/center carries real signal that semisimple models
+discard. The model recovers the global operator `A` from noisy local least-squares estimates. Data is generated
+synthetically (no external download needed):
 
 ```bash
-cd relns
+cd system-id
 
-# (a) generate the dataset (scripts in data_gen/)
-python data_gen/gen_sl3_inv_data.py
-
-# (b) train (each experiment reads a YAML config)
-python experiment/sl3_inv_train.py --training_config config/sl3_inv/training_param.yaml
-
-# (c) test
-python experiment/sl3_inv_test.py  --testing_config  config/sl3_inv/testing_param.yaml
+python train.py --model reln  --train_transform gl --epochs 60   # ReLN (ours)
+python train.py --model ln    --train_transform gl --epochs 60   # Lie Neurons baseline
+python train.py --model noneq --train_transform gl --epochs 60   # non-equivariant
+python train.py --model avg_ls                                   # least-squares baseline
 ```
 
-Swap the prefix to run the other benchmarks: `sl3_equiv`, `sp4_inv`, `gl2_solid`, `platonic_solid_cls`
-(matching `experiment/<name>_{train,test}.py` and `config/<name>/`).
+Test splits include `id` / `gl` / `gl-hard` / `scale` / `shear`; metrics report trace and canonical
+(basis-invariant) MSE. See [`system-id/README.md`](system-id/README.md) for details.
 
-### 2. Particle physics: top-tagging — Lorentz group `SO(1,3)` &nbsp;(`LorentzNet-release/`)
+### 2. Drone state estimation — `GL(n)`-structured inputs &nbsp;(`velocity-learning/`)
 
-Download the converted top-tagging dataset (see [`LorentzNet-release/README.md`](LorentzNet-release/README.md)) into
-`./data/top/`, then:
-
-```bash
-cd LorentzNet-release
-
-torchrun --nproc_per_node=4 top_tagging.py \
-    --batch_size=32 --epochs=35 --warmup_epochs=5 \
-    --n_layers=6 --n_hidden=72 --lr=0.001 \
-    --c_weight=0.005 --dropout=0.2 --weight_decay=0.01 \
-    --exp_name=reln_top_tagging
-```
-
-Add `--test_mode` (with the same `--exp_name`) to evaluate. Reduce `--nproc_per_node` to your GPU count.
-
-### 3. Drone state estimation — `SO(3)` with uncertainty &nbsp;(`velocity-learning/`)
+Orthogonal task symmetry, but the inputs are center-sensitive: velocity `v` paired with an uncertainty covariance
+`C ∈ SPD(3)` whose scale/trace a semisimple model would throw away.
 
 ```bash
 cd velocity-learning
@@ -174,6 +171,52 @@ Compare against baselines by changing `--arch`:
 
 See [`velocity-learning/README.md`](velocity-learning/README.md) for evaluation and the EKF-filter pipeline
 (`src/main_filter.py`).
+
+### 3. 3D Gaussian Splatting — `GL(n)`-structured inputs
+
+Another center-sensitive setting: a 3D Gaussian couples a mean `μ ∈ ℝ³` with an anisotropic covariance
+`Σ ∈ SPD(3)` (`μ ↦ Rμ`, `Σ ↦ RΣRᵀ`). We rebuild the encoder/decoder of a Gaussian masked-autoencoder with ReLN
+blocks to enforce `GL(3)`-equivariance, keeping accuracy stable under arbitrary rotations where the baseline
+collapses. The ReLN-Gaussian-MAE code is maintained as a separate release (built on ShapeSplat / Gaussian-MAE);
+see the [project page](https://reductive-lie-neuron.github.io/).
+
+### 4. Algebraic benchmarks — `sl(3)`, `sp(4)`, `gl(2)` (foundations) &nbsp;(`relns/`)
+
+Semisimple regimes that verify the general `gl(n)` construction specializes correctly and stays backward-compatible
+with Lie Neurons.
+
+```bash
+cd relns
+
+# (a) generate the dataset (scripts in data_gen/)
+python data_gen/gen_sl3_inv_data.py
+
+# (b) train (each experiment reads a YAML config)
+python experiment/sl3_inv_train.py --training_config config/sl3_inv/training_param.yaml
+
+# (c) test
+python experiment/sl3_inv_test.py  --testing_config  config/sl3_inv/testing_param.yaml
+```
+
+Swap the prefix to run the other benchmarks: `sl3_equiv`, `sp4_inv`, `gl2_solid`, `platonic_solid_cls`
+(matching `experiment/<name>_{train,test}.py` and `config/<name>/`).
+
+### 5. Particle physics: top-tagging — Lorentz group `SO(1,3)` (compatibility) &nbsp;(`LorentzNet-release/`)
+
+Download the converted top-tagging dataset (see [`LorentzNet-release/README.md`](LorentzNet-release/README.md)) into
+`./data/top/`, then:
+
+```bash
+cd LorentzNet-release
+
+torchrun --nproc_per_node=4 top_tagging.py \
+    --batch_size=32 --epochs=35 --warmup_epochs=5 \
+    --n_layers=6 --n_hidden=72 --lr=0.001 \
+    --c_weight=0.005 --dropout=0.2 --weight_decay=0.01 \
+    --exp_name=reln_top_tagging
+```
+
+Add `--test_mode` (with the same `--exp_name`) to evaluate. Reduce `--nproc_per_node` to your GPU count.
 
 ---
 
